@@ -125,11 +125,13 @@ export default function ProjectModal({ project, onClose }) {
                 <ExternalLink size={16} /> Live Demo
               </a>
             )}
-            {!project.githubUrl && !project.liveUrl && (
-              <p className="text-xs text-ink-500 italic">
-                Repository and demo links can be added in{' '}
-                <code className="text-emerald-500">src/config/profile.js</code>.
-              </p>
+                       {!project.githubUrl && !project.liveUrl && (
+              <div className="flex items-center gap-2 pt-2">
+                <span className="w-8 h-px bg-emerald-500/50" />
+                <p className="text-xs tracking-widest uppercase text-emerald-400 font-medium">
+                  Where Materials Science Meets Artificial Intelligence
+                </p>
+              </div>
             )}
           </div>
         </div>

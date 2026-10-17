@@ -290,29 +290,55 @@ export const profile = {
           'Building an efficient discovery platform for higher education opportunities.',
       },
     },
+
+
+
+
+
+
+
     {
       id: 'leabas',
       number: '05',
       title: 'LEABAS',
-      subtitle: 'Software Development Project',
+      subtitle: 'Limestone Extraction & Beneficiation Analysis System',
       short:
-        'A comprehensive software repository showcasing modern development practices and application architecture.',
-      category: 'Software Development',
-      tags: ['Software Engineering', 'GitHub', 'Web Development'],
+        'A Python-based analytical system designed to process and analyze experimental data from limestone extraction and beneficiation operations.',
+      category: 'Materials Engineering & Software',
+      tags: ['Python', 'Materials Engineering', 'Data Analysis', 'Mineral Processing'],
       githubUrl: 'https://github.com/thodaniel3-sudo/LEABAS',
       liveUrl: '',
       detail: {
         overview:
-          'LEABAS is a software development project hosted on GitHub. The repository contains the source code and configuration for the application.',
-        materials: ['Source code', 'Application architecture'],
-        methods: ['Software development lifecycle', 'Version control with Git'],
-        properties: ['Functional application logic'],
+          'LEABAS (Limestone Extraction & Beneficiation Analysis System) is a custom Python application built to analyze real-world experimental data from limestone processing. It takes data from physical operations — such as jaw crushing, ball milling, sieve analysis and froth floatation, — and calculates key material parameters to evaluate the efficiency of the beneficiation process.',
+        materials: [
+          'Feed mass data from jaw crusher and ball mill',
+          'Sieve analysis results (mass retained and mass passing)',
+          'Processing time parameters',
+          'Particle size distribution data',
+        ],
+        methods: [
+          'Python-based data processing and computation',
+          'Sieve analysis calculations (cumulative mass, percentage passing)',
+          'Feed rate and throughput analysis',
+          'Result visualization and reporting',
+        ],
+        properties: [
+          'Total feed mass',
+          'Mass passing through each sieve',
+          'Time-based processing rates',
+          'Beneficiation efficiency metrics',
+        ],
         relevance:
-          'Demonstrates software engineering capabilities and version control proficiency.',
+          'Demonstrates how software can be applied directly to mineral processing and materials engineering problems, turning raw experimental data into actionable engineering insights.',
         focus:
-          'Developing structured, maintainable software solutions.',
+          'Bridging experimental mineral processing with computational data analysis using Python.',
       },
     },
+
+
+
+
     {
       id: 'gospel-pillars',
       number: '06',
