@@ -44,7 +44,7 @@ export default function Hero() {
               {/* Image Frame */}
               <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-ink-900 shadow-2xl">
                 <img
-                  src="/daniel.png"
+                  src="/daniel.jpg"
                   alt="Daniel Thomas"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
