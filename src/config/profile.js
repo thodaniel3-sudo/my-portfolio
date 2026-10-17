@@ -599,7 +599,7 @@ export const profile = {
       description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom.',
     },
     {
-      role: 'EICOM Chairman',
+      role: 'ELCOM Chairman',
       organization: 'Student Political Body',
       date: '2026',
       description: 'Coordinated electoral activities and oversaw the conduct of elections for student political positions as chairman.',
