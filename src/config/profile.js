@@ -121,6 +121,7 @@ export const profile = {
         'Git',
         'GitHub',
         'Vercel',
+        'Netlify',
       ],
     },
     {
@@ -338,8 +339,80 @@ export const profile = {
       },
     },
     {
-      id: 'telegram-bot',
+      id: 'cgpa-calculator',
       number: '06',
+      title: 'CGPA Calculator',
+      subtitle: 'Student Academic Portal & PDF Generator',
+      short:
+        'An application that helps students calculate their CGPA by entering course units and grades, generating a downloadable PDF result page.',
+      category: 'Web Development',
+      tags: ['JavaScript', 'Web App', 'Netlify', 'PDF Generation'],
+      githubUrl: 'https://github.com/thodaniel3/cgpa-calculator',
+      liveUrl: 'https://cgpa-calculatorfutminna.netlify.app/',
+      detail: {
+        overview:
+          'The CGPA calculator is an application that calculates students CGPA. Some students may not understand how to calculate their CGPA. So what the application does is that you enter the course, the units, and the grade, together with your name, your details, and your image. So it will calculate it and give you the results page. So the results page can be downloaded in the form of PDF.',
+        materials: [
+          'Course names and units',
+          'Student grades',
+          'Student personal details and image',
+        ],
+        methods: [
+          'Frontend calculation logic',
+          'Form data collection',
+          'PDF generation for result output',
+          'Netlify deployment',
+        ],
+        properties: [
+          'Accurate CGPA computation',
+          'Downloadable PDF results',
+          'User-friendly interface',
+        ],
+        relevance:
+          'Demonstrates the ability to build practical web utilities that solve everyday student problems and improve academic administration.',
+        focus:
+          'Creating accessible, downloadable academic tools for students.',
+      },
+    },
+    {
+      id: 'mme-portal',
+      number: '07',
+      title: 'MME Department Portal',
+      subtitle: 'Faculty Information & Gallery Portal',
+      short:
+        'A complete department portal for the Materials and Metallurgical Engineering department, featuring galleries, publications, mission statements, and departmental achievements.',
+      category: 'Web Development',
+      tags: ['Web Portal', 'HTML/CSS', 'Gallery', 'Information Architecture'],
+      githubUrl: 'https://github.com/thodaniel3/mme-newportal',
+      liveUrl: '',
+      detail: {
+        overview:
+          'I created a portal for MME students for the Department of Materials and Metallurgical Engineering. A portal is like a website where all information is passed across and contains a gallery section to review the achievements of the department, what has been done in the department, the publications, and other things too. And other things about the department, the mission of the department. It is a complete portal.',
+        materials: [
+          'Departmental publications',
+          'Gallery images',
+          'Mission statements and department history',
+        ],
+        methods: [
+          'Web development (HTML/CSS)',
+          'Information architecture design',
+          'Content organization',
+        ],
+        properties: [
+          'Gallery section',
+          'Publications archive',
+          'Mission and vision display',
+          'Departmental achievements',
+        ],
+        relevance:
+          'Demonstrates the ability to build comprehensive, content-rich informational portals for academic institutions.',
+        focus:
+          'Creating a central, accessible hub for departmental information and achievements.',
+      },
+    },
+    {
+      id: 'telegram-bot',
+      number: '08',
       title: 'Automated Telegram Forecast Bot',
       subtitle: 'AI Assistant for Data Forecasting',
       short:
@@ -375,7 +448,7 @@ export const profile = {
     },
     {
       id: 'university-finder',
-      number: '07',
+      number: '09',
       title: 'University Finder',
       subtitle: 'Web Platform for Academic Discovery',
       short:
@@ -413,7 +486,7 @@ export const profile = {
     },
     {
       id: 'gospel-pillars',
-      number: '08',
+      number: '10',
       title: 'Gospel Pillars Campus Fellowship',
       subtitle: 'Organization Biodata Platform',
       short:
@@ -436,7 +509,7 @@ export const profile = {
     },
     {
       id: 'materials-informatics-property-prediction',
-      number: '09',
+      number: '11',
       title: 'Materials Informatics Property Prediction Program',
       subtitle: 'Python Program for Property Estimation',
       short:
