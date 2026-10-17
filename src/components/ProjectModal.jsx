@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { X, Github, ExternalLink, Layers, Wrench, Target, Award } from 'lucide-react';
+import { X, Github, ExternalLink, Layers, Wrench, Target, Award, Info } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -15,6 +15,9 @@ export default function ProjectModal({ project, onClose }) {
 
   if (!project) return null;
   const { detail } = project;
+
+  // Check if the project has GitHub links but no live demo
+  const requiresSetup = (project.githubUrl || detail?.githubBackendUrl) && !project.liveUrl;
 
   return (
     <div
@@ -103,6 +106,21 @@ export default function ProjectModal({ project, onClose }) {
               {detail.focus}
             </Section>
           </div>
+
+          {/* DEVELOPER NOTE BANNER */}
+          {requiresSetup && (
+            <div className="mt-10 p-4 rounded-lg border border-electric-400/30 bg-electric-500/5 flex gap-3 items-start">
+              <Info size={18} className="text-electric-400 mt-0.5 shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-electric-300 mb-1">Developer Note</p>
+                <p className="text-xs text-ink-300 leading-relaxed">
+                  This repository contains the full source code. However, to run it locally, certain environment variables, databases, and API keys are required (which are not hosted on GitHub for security). 
+                  <br /><br />
+                  If you would like to view the fully functioning application or request a live demo, please <a href="#contact" onClick={onClose} className="text-emerald-400 hover:underline">contact me directly</a>.
+                </p>
+              </div>
+            </div>
+          )}
 
           <div className="mt-10 flex flex-wrap gap-3">
             {project.githubUrl && (
