@@ -8,15 +8,15 @@ export const profile = {
   title: 'Materials & Metallurgical Engineer',
 
   tagline: 'Materials Science • Materials Informatics • AI • Sustainable Materials',
+
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
 
   // --- Contact ---
   email: 'thodaniel3@gmail.com',
-    whatsapp: '+2348107247625',
+  whatsapp: '+2348107247625',
   github: 'https://github.com/thodaniel3-sudo/',
   linkedin: 'https://www.linkedin.com/in/daniel-thomas-90055b428',
-  // Update this AFTER deploying to Vercel, e.g. 'https://danielthomas.vercel.app'
-  canonicalUrl: 'YOUR_CANONICAL_URL_HERE',
+  canonicalUrl: 'https://daniel-thomas.vercel.app',
 
   // --- Hero ---
   hero: {
@@ -182,13 +182,13 @@ export const profile = {
     {
       id: 'hybrid-composite-prediction',
       number: '02',
-      title: 'Hybrid Composite Prediction System',
+      title: 'Hybrid Composite Prediction System (HCPS)',
       subtitle: 'ML-Driven Materials Property Prediction',
       short:
         'A Python-based engineering application that predicts hybrid composite properties using materials data and machine learning.',
       category: 'Materials Informatics',
       tags: ['Python', 'Machine Learning', 'Materials Informatics', 'Data Science', 'Materials Engineering'],
-      githubUrl: '',
+      githubUrl: 'https://github.com/thodaniel3-sudo/HCPS',
       liveUrl: '',
       detail: {
         overview:
@@ -217,8 +217,44 @@ export const profile = {
       },
     },
     {
-      id: 'university-finder',
+      id: 'telegram-bot',
       number: '03',
+      title: 'Automated Telegram Forecast Bot',
+      subtitle: 'AI Assistant for Data Forecasting',
+      short:
+        'A custom Telegram bot that uses AI to predict forecasts every 15 minutes and delivers automated data insights directly to the user.',
+      category: 'Software / AI',
+      tags: ['Python', 'AI', 'Telegram API', 'Automation', 'Data Forecasting'],
+      githubUrl: 'https://github.com/thodaniel3-sudo/telegram-bot',
+      liveUrl: '',
+      detail: {
+        overview:
+          'A custom Telegram bot designed to provide automated, real-time forecasting. It operates on a 15-minute automated interval to generate predictions and send them directly to the user via the Telegram messaging platform.',
+        materials: [
+          'Real-time data feeds',
+          'Forecasting models',
+          'Telegram Bot API',
+        ],
+        methods: [
+          'Python scripting',
+          'API integration',
+          'Automated scheduled tasks (cron jobs)',
+          'Message formatting and delivery',
+        ],
+        properties: [
+          '15-minute automated forecasting',
+          'Direct Telegram messaging',
+          'Real-time data processing',
+        ],
+        relevance:
+          'Demonstrates the application of Python and artificial intelligence to build functional, automated software tools for real-world forecasting and communication.',
+        focus:
+          'Building accessible AI tools that automate complex forecasting tasks and deliver insights to users without friction.',
+      },
+    },
+    {
+      id: 'university-finder',
+      number: '04',
       title: 'University Finder',
       subtitle: 'Web Platform for Academic Discovery',
       short:
@@ -226,7 +262,7 @@ export const profile = {
       category: 'Full-Stack Development',
       tags: ['Full Stack', 'Flask', 'React', 'Supabase', 'EdTech', 'Search', 'AI / Data'],
       githubUrl: '',
-      liveUrl: '',
+      liveUrl: 'https://university-finder.me/',
       detail: {
         overview:
           'A web-based university discovery platform designed to help students find universities, courses, scholarships, application information, and relevant academic opportunities.',
@@ -255,8 +291,54 @@ export const profile = {
       },
     },
     {
+      id: 'leabas',
+      number: '05',
+      title: 'LEABAS',
+      subtitle: 'Software Development Project',
+      short:
+        'A comprehensive software repository showcasing modern development practices and application architecture.',
+      category: 'Software Development',
+      tags: ['Software Engineering', 'GitHub', 'Web Development'],
+      githubUrl: 'https://github.com/thodaniel3-sudo/LEABAS',
+      liveUrl: '',
+      detail: {
+        overview:
+          'LEABAS is a software development project hosted on GitHub. The repository contains the source code and configuration for the application.',
+        materials: ['Source code', 'Application architecture'],
+        methods: ['Software development lifecycle', 'Version control with Git'],
+        properties: ['Functional application logic'],
+        relevance:
+          'Demonstrates software engineering capabilities and version control proficiency.',
+        focus:
+          'Developing structured, maintainable software solutions.',
+      },
+    },
+    {
+      id: 'gospel-pillars',
+      number: '06',
+      title: 'Gospel Pillars Campus Fellowship',
+      subtitle: 'Organization Biodata Platform',
+      short:
+        'A live web application built to manage and display organizational biodata, serving the campus fellowship community.',
+      category: 'Web Development',
+      tags: ['React', 'Vercel', 'Frontend', 'Web App'],
+      githubUrl: '',
+      liveUrl: 'https://gospelpillarscampusfellowshipbiodat.vercel.app/',
+      detail: {
+        overview:
+          'A live web platform designed to host and display the biodata and organizational information for the Gospel Pillars Campus Fellowship.',
+        materials: ['Organizational data', 'User profiles'],
+        methods: ['React frontend', 'Vercel deployment', 'Responsive design'],
+        properties: ['Data display', 'User accessibility', 'Mobile responsiveness'],
+        relevance:
+          'Demonstrates the ability to build and deploy real-world web applications that serve an active community.',
+        focus:
+          'Creating functional, accessible web platforms for organizational management.',
+      },
+    },
+    {
       id: 'materials-informatics-property-prediction',
-      number: '04',
+      number: '07',
       title: 'Materials Informatics Property Prediction Program',
       subtitle: 'Python Program for Property Estimation',
       short:
