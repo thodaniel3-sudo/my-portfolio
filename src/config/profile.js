@@ -602,6 +602,8 @@ export const profile = {
       organization: 'Federal University of Technology, Minna',
       date: '2024',
       description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom.',
+    image: '/nammes-event.jpeg', 
+    
     },
     {
       role: 'ELCOM Chairman',
