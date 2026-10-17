@@ -11,14 +11,14 @@ export const profile = {
 
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
 
-    // --- Contact ---
+  // --- Contact ---
   email: 'thodaniel3@gmail.com',
   whatsapp: '+2348107247625',
   facebook: 'https://www.facebook.com/thomasdaniel263',
   github: 'https://github.com/thodaniel3-sudo/',
   linkedin: 'https://www.linkedin.com/in/daniel-thomas-90055b428',
   canonicalUrl: 'https://daniel-thomas.vercel.app',
-  
+
   // --- Hero ---
   hero: {
     eyebrow: 'Portfolio — Materials Engineering & Research',
@@ -33,12 +33,11 @@ export const profile = {
     paragraphs: [
       'I am Daniel Thomas, a Materials and Metallurgical Engineering graduate from the Federal University of Technology, Minna, Nigeria.',
       'My academic background combines materials engineering fundamentals with growing interests in computational materials science, materials informatics, machine learning, sustainable materials, and data-driven engineering.',
-      'My interests are focused on understanding and designing materials using both experimental engineering approaches and computational / data-driven techniques.',
       'I am particularly interested in how artificial intelligence and machine learning can accelerate materials discovery, prediction, optimization, characterization, and engineering decision-making.',
       'I am also passionate about sustainable engineering and the transformation of waste-derived materials into useful engineering products.',
     ],
     profileSummary:
-      'Daniel Thomas is a Materials and Metallurgical Engineer with an academic background in materials engineering and growing expertise in materials informatics, computational materials science, machine learning, and sustainable materials development. His work explores the intersection of engineering materials, data, computation, and artificial intelligence, with particular interest in composite materials and the use of waste-derived resources for sustainable engineering applications.',
+      'Daniel Thomas is a Materials and Metallurgical Engineer with a strong academic foundation and growing expertise in materials science, materials informatics, computational materials science, machine learning, and sustainable materials development. He is interested in combining experimental and data-driven methods to design advanced materials and optimize production processes. He aspires to pursue a Master’s degree in Materials Science and Engineering, contribute to innovative research, and become a professor focused on sustainable materials and AI-driven engineering.',
   },
 
   // --- Research Philosophy ---
@@ -60,7 +59,7 @@ export const profile = {
     { title: 'Data-driven Materials Engineering', description: 'Integrating engineering with analytics pipelines.' },
   ],
 
-  // --- Education ---
+  // --- Education & Awards ---
   education: [
     {
       institution: 'Federal University of Technology, Minna',
@@ -68,8 +67,19 @@ export const profile = {
       degree: 'Bachelor of Engineering (B.Eng.)',
       field: 'Materials and Metallurgical Engineering',
       department: 'Department of Materials and Metallurgical Engineering',
-      graduation: 'October 2026',
+      graduation: '2026',
       grade: '4.33',
+      award: 'Best Graduating Student – B.Eng. (FUT Minna)',
+    },
+    {
+      institution: 'NEPA Staff Secondary School',
+      country: 'Nigeria',
+      degree: 'W.A.E.C',
+      field: 'Science Student',
+      department: 'Secondary Education',
+      graduation: '2012',
+      grade: '',
+      award: 'Excellent performance in Geography & Mathematics',
     },
   ],
 
@@ -88,6 +98,7 @@ export const profile = {
         'Sustainable Materials',
         'Polymer Composites',
         'Automotive Materials',
+        'Mineral Processing',
       ],
     },
     {
@@ -101,6 +112,7 @@ export const profile = {
         'Data Visualization',
         'Computational Materials Science',
         'Scientific Computing',
+        'Cloud Computing (AWS, Azure, GCP)',
       ],
     },
     {
@@ -126,15 +138,18 @@ export const profile = {
       ],
     },
     {
-      category: 'Engineering / Research',
-      level: 'Academic Experience',
+      category: 'Soft Skills & Languages',
+      level: 'Professional',
       items: [
-        'Research',
-        'Experimental Design',
-        'Scientific Literature Review',
-        'Technical Documentation',
-        'Engineering Data Analysis',
+        'Leadership',
+        'Teaching & Mentorship',
+        'Strategic Planning',
         'Problem Solving',
+        'Teamwork',
+        'Communication',
+        'Igbo (Native)',
+        'English (Fluent)',
+        'German (Basic / Learning)',
       ],
     },
   ],
@@ -543,26 +558,69 @@ export const profile = {
     },
   ],
 
-  // --- Research / Academic Experience ---
+  // --- Research / Academic Experience & Training ---
   researchExperience: [
     {
-      title: 'Nanotechnology Research Group — Seminars',
-      description:
-        'Attended seminars associated with the Nanotechnology Research Group and developed exposure to topics related to nanotechnology and advanced materials research.',
+      title: 'Research & Academic Projects (2021–2026)',
+      description: 'Developed an eco-friendly epoxy hybrid composite reinforced with bio-waste. Built engineering software using Python (composite prediction, limestone extraction analysis, grinder/polishing machine software, characterization analysis). Developed a materials informatics program to predict properties using experimental data and AI models.',
     },
     {
-      title: 'Entrepreneurship / Product Development Activities',
-      description:
-        'Participated in entrepreneurship-related activities and activities involving the development and production of new products — one example involved soap-related products.',
+      title: 'Teaching & Volunteering',
+      description: 'Tutored students in physics, chemistry, and mathematics at primary, junior-secondary, and university levels. Taught engineering mathematics, heat and mass transfer, transfer functions, ionic equilibrium diagrams, Fourier series, and Laplace transforms. Built websites and applications for people.',
+    },
+    {
+      title: 'Mineral Processing Laboratory (Sep–Nov 2026)',
+      description: 'Practical exposure to bauxite and mineral-processing activities, jaw crushing, sorting equipment, testing machines, casting, corrosion studies, fabrication, and analysis.',
+    },
+    {
+      title: 'Nanotechnology Research Group (2024)',
+      description: 'Attended seminars and gained exposure to nanotechnology and advanced-materials research; received a certificate of participation.',
     },
   ],
 
   // --- Industrial Training ---
   training: [
     {
-      institution: 'NIDDA',
-      description:
-        'Industrial training exposure involving computer-related instruction and Python.',
+      institution: 'NITDA (Jul–Dec 2025)',
+      description: 'Gained practical exposure to data management, cloud computing (AWS, Azure, Google Cloud), Python programming, web development, database management, and system deployment.',
+    },
+    {
+      institution: 'Federal University Entrepreneurship Centre (2023–2024)',
+      description: 'Instructed participants in soap, cream, and related product preparation.',
+    }
+  ],
+
+  // --- Leadership & Responsibilities ---
+  leadership: [
+    {
+      role: 'Vice President, MME Department',
+      organization: 'Federal University of Technology, Minna',
+      date: '2024',
+      description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom.',
+    },
+    {
+      role: 'EICOM Chairman',
+      organization: 'Student Political Body',
+      date: '2026',
+      description: 'Coordinated electoral activities and oversaw the conduct of elections for student political positions as chairman.',
+    },
+    {
+      role: 'Academic Group Leader',
+      organization: 'University',
+      date: '2022–2026',
+      description: 'Led student groups during academic assignments and practical sessions, coordinating teamwork and task completion.',
+    },
+    {
+      role: 'Classroom Teacher and Acting Head Teacher',
+      organization: 'School',
+      date: '2015–2020',
+      description: 'Supported teaching, classroom administration, student supervision, and the maintenance of an orderly learning environment.',
+    },
+    {
+      role: 'Class Prefect',
+      organization: 'Secondary School',
+      date: '2006–2007',
+      description: 'Supervised class activities, maintained discipline, and supported the effective day-to-day management of the classroom.',
     },
   ],
 

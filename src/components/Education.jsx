@@ -28,9 +28,18 @@ export default function Education() {
                           {ed.field}
                         </h3>
                       </div>
-                      <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs">
-                        <Award size={12} /> Final Grade: {ed.grade}
-                      </span>
+                      <div className="flex flex-col gap-2 items-end">
+                        {ed.grade && (
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs">
+                            <Award size={12} /> Grade: {ed.grade}
+                          </span>
+                        )}
+                        {ed.award && (
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/5 text-amber-400 text-xs">
+                            <Award size={12} /> {ed.award}
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mt-6 pt-6 border-t border-white/5">
