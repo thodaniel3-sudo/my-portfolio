@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles, MessageCircle, Facebook } from 'lucide-react';
 import profile from '../config/profile.js';
 import CrystalCanvas from './CrystalCanvas.jsx';
 
@@ -43,7 +43,6 @@ export default function Hero() {
               
               {/* Image Frame */}
               <div className="relative w-64 sm:w-72 md:w-80 lg:w-96 aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-ink-900 shadow-2xl">
-                {/* Replace /daniel.jpg with your actual image path if different */}
                 <img
                   src="/daniel.png"
                   alt="Daniel Thomas"
@@ -51,10 +50,8 @@ export default function Hero() {
                   loading="eager"
                 />
                 
-                {/* Subtle gradient overlay on the image bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/20 to-transparent opacity-80" />
                 
-                {/* Floating Name Tag inside the image */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="backdrop-blur-md bg-ink-950/60 border border-white/10 rounded-lg p-3">
                     <p className="text-emerald-400 text-xs font-medium tracking-wider uppercase mb-1">
@@ -135,6 +132,7 @@ export default function Hero() {
               <div className="flex items-center gap-4">
                 <SocialLink href={profile.github} icon={<Github size={14} />} label="GitHub" />
                 <SocialLink href={profile.linkedin} icon={<Linkedin size={14} />} label="LinkedIn" />
+                <SocialLink href={profile.facebook} icon={<Facebook size={14} />} label="Facebook" />
                 <SocialLink
                   href={isEmailPlaceholder ? '' : `mailto:${profile.email}`}
                   icon={<Mail size={14} />}

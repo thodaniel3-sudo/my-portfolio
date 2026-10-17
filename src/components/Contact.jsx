@@ -1,10 +1,9 @@
-import { Mail, Github, Linkedin, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, Facebook, ArrowUpRight, MessageCircle } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
 export default function Contact() {
   const isEmailPlaceholder = profile.email === 'YOUR_EMAIL_HERE';
-  // Formats the WhatsApp number by removing spaces, plus signs, and dashes
   const waNumber = profile.whatsapp ? profile.whatsapp.replace(/\D/g, '') : '';
 
   return (
@@ -20,7 +19,7 @@ export default function Contact() {
               <h2 className="heading">{profile.contact.headline}</h2>
               <p className="body-text mt-6 text-base md:text-lg">{profile.contact.text}</p>
 
-              <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
                 <ContactCard
                   icon={<Mail size={16} />}
                   label="Email"
@@ -48,9 +47,15 @@ export default function Contact() {
                   value={isUrlPlaceholder(profile.linkedin) ? 'Set in profile.js' : 'View profile'}
                   href={profile.linkedin}
                 />
+
+                <ContactCard
+                  icon={<Facebook size={16} />}
+                  label="Facebook"
+                  value={isUrlPlaceholder(profile.facebook) ? 'Set in profile.js' : 'View profile'}
+                  href={profile.facebook}
+                />
               </div>
 
-              {/* Contact form — mailto based, no backend required */}
               <ContactForm email={profile.email} />
             </div>
           </div>

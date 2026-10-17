@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Facebook, Mail, ArrowUp } from 'lucide-react';
 import profile from '../config/profile.js';
 
 export default function Footer() {
@@ -49,6 +49,9 @@ export default function Footer() {
               </FooterIcon>
               <FooterIcon href={profile.linkedin} label="LinkedIn">
                 <Linkedin size={16} />
+              </FooterIcon>
+              <FooterIcon href={profile.facebook} label="Facebook">
+                <Facebook size={16} />
               </FooterIcon>
               <FooterIcon
                 href={

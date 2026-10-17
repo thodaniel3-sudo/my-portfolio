@@ -11,13 +11,14 @@ export const profile = {
 
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
 
-  // --- Contact ---
+    // --- Contact ---
   email: 'thodaniel3@gmail.com',
   whatsapp: '+2348107247625',
+  facebook: 'https://www.facebook.com/thomasdaniel263',
   github: 'https://github.com/thodaniel3-sudo/',
   linkedin: 'https://www.linkedin.com/in/daniel-thomas-90055b428',
   canonicalUrl: 'https://daniel-thomas.vercel.app',
-
+  
   // --- Hero ---
   hero: {
     eyebrow: 'Portfolio — Materials Engineering & Research',
