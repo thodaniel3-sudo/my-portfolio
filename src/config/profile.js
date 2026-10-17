@@ -116,6 +116,8 @@ export const profile = {
         'Tailwind CSS',
         'REST APIs',
         'Supabase',
+        'Node.js',
+        'Express.js',
         'Git',
         'GitHub',
         'Vercel',
@@ -180,8 +182,88 @@ export const profile = {
       },
     },
     {
-      id: 'hybrid-composite-prediction',
+      id: 'leabas',
       number: '02',
+      title: 'LEABAS',
+      subtitle: 'Limestone Extraction & Beneficiation Analysis System',
+      short:
+        'A Python-based analytical system designed to process and analyze experimental data from limestone extraction and beneficiation operations.',
+      category: 'Materials Engineering & Software',
+      tags: ['Python', 'Materials Engineering', 'Data Analysis', 'Mineral Processing'],
+      githubUrl: 'https://github.com/thodaniel3-sudo/LEABAS',
+      liveUrl: '',
+      detail: {
+        overview:
+          'LEABAS (Limestone Extraction & Beneficiation Analysis System) is a custom Python application built to analyze real-world experimental data from limestone processing. It takes data from physical operations — such as jaw crushing, ball milling, and sieve analysis — and calculates key material parameters to evaluate the efficiency of the beneficiation process.',
+        materials: [
+          'Feed mass data from jaw crusher and ball mill',
+          'Sieve analysis results (mass retained and mass passing)',
+          'Processing time parameters',
+          'Particle size distribution data',
+        ],
+        methods: [
+          'Python-based data processing and computation',
+          'Sieve analysis calculations (cumulative mass, percentage passing)',
+          'Feed rate and throughput analysis',
+          'Result visualization and reporting',
+        ],
+        properties: [
+          'Total feed mass',
+          'Mass passing through each sieve',
+          'Time-based processing rates',
+          'Beneficiation efficiency metrics',
+        ],
+        relevance:
+          'Demonstrates how software can be applied directly to mineral processing and materials engineering problems, turning raw experimental data into actionable engineering insights.',
+        focus:
+          'Bridging experimental mineral processing with computational data analysis using Python.',
+      },
+    },
+    {
+      id: 'mwcnt-characterization',
+      number: '03',
+      title: 'MWCNT Characterization and Analysis System',
+      subtitle: 'Scientific Software for Materials Characterization',
+      short:
+        'A Python-based scientific application for analyzing and visualizing experimental characterization data of multi-walled carbon nanotubes (MWCNTs).',
+      category: 'Scientific Software / Materials Informatics',
+      tags: ['Python', 'Materials Characterization', 'Data Analysis', 'Scientific Computing'],
+      githubUrl: 'https://github.com/thodaniel3-sudo/characterization-software',
+      liveUrl: '',
+      detail: {
+        overview:
+          'Developed a Python-based scientific application for analyzing and visualizing experimental characterization data of multi-walled carbon nanotubes (MWCNTs). The application integrates multiple characterization techniques to support the evaluation of surface area, pore structure, elemental composition, crystallographic properties, and material morphology. It features automated data processing, graphical visualization, database storage, and PDF report generation, helping streamline materials characterization workflows and improve the organization and presentation of experimental results.',
+        materials: [
+          'BET Adsorption Data (Specific surface area)',
+          'BJH Data (Pore-size distributions, radius, diameter)',
+          'DFT Data (Pore-size distribution & model-fitting)',
+          'EDS Data (Elemental composition)',
+          'XRD Data (Diffraction patterns and peak detection)',
+          'SEM/TEM Images (Microscopy and metadata)',
+        ],
+        methods: [
+          'Python-based data processing and computation',
+          'Tkinter/ttk for graphical user interface',
+          'Pandas for data manipulation',
+          'Matplotlib for scientific plotting and visualization',
+          'SQLite for database management and storage',
+          'ReportLab for automated PDF report generation',
+        ],
+        properties: [
+          'Surface area and pore structure analysis',
+          'Elemental composition evaluation',
+          'Crystallographic property assessment',
+          'Material morphology visualization',
+        ],
+        relevance:
+          'Streamlines complex materials characterization workflows by integrating multiple analytical techniques into a single automated software interface, improving the organization and presentation of experimental results.',
+        focus:
+          'Applying computational tools to automate data processing and visualization for advanced materials characterization.',
+      },
+    },
+    {
+      id: 'hybrid-composite-prediction',
+      number: '04',
       title: 'Hybrid Composite Prediction System (HCPS)',
       subtitle: 'ML-Driven Materials Property Prediction',
       short:
@@ -217,8 +299,47 @@ export const profile = {
       },
     },
     {
+      id: 'attendance-system',
+      number: '05',
+      title: 'QR Code-Based Student Attendance Management System',
+      subtitle: 'Full-Stack Web Application',
+      short:
+        'A web-based attendance management system with separate frontend and backend, allowing students to register, download unique QR codes, and lecturers to scan and record attendance electronically.',
+      category: 'Full-Stack Development',
+      tags: ['Node.js', 'Express.js', 'JavaScript', 'Supabase', 'Web Development'],
+      githubUrl: 'https://github.com/thodaniel3/attendance-frontend',
+      liveUrl: '',
+      detail: {
+        overview:
+          'Designed and developed a web-based attendance management system with a separate frontend and backend to streamline student registration and attendance tracking. The system enables students to register and download their unique QR codes, which lecturers scan to identify students and record attendance electronically. The application integrates database management and backend verification to support organized attendance records, reduce manual processes, and improve the efficiency of classroom attendance management.',
+        materials: [
+          'Student registration data',
+          'QR Code generation libraries',
+          'Attendance records',
+          'Frontend and Backend codebases',
+        ],
+        methods: [
+          'Frontend development (HTML, CSS, JavaScript)',
+          'Backend development (Node.js, Express.js)',
+          'Database integration (Supabase)',
+          'QR code scanning and verification workflows',
+        ],
+        properties: [
+          'Student registration and profile management',
+          'Unique QR code generation and download',
+          'QR code scanning for attendance recording',
+          'Electronic attendance tracking and record management',
+        ],
+        relevance:
+          'Demonstrates full-stack software engineering capabilities, database management, and the ability to solve real-world administrative problems with technology.',
+        focus:
+          'Building a reliable, automated attendance tracking solution using web technologies.',
+        githubBackendUrl: 'https://github.com/thodaniel3/attendance-backend',
+      },
+    },
+    {
       id: 'telegram-bot',
-      number: '03',
+      number: '06',
       title: 'Automated Telegram Forecast Bot',
       subtitle: 'AI Assistant for Data Forecasting',
       short:
@@ -254,7 +375,7 @@ export const profile = {
     },
     {
       id: 'university-finder',
-      number: '04',
+      number: '07',
       title: 'University Finder',
       subtitle: 'Web Platform for Academic Discovery',
       short:
@@ -290,58 +411,9 @@ export const profile = {
           'Building an efficient discovery platform for higher education opportunities.',
       },
     },
-
-
-
-
-
-
-
-    {
-      id: 'leabas',
-      number: '05',
-      title: 'LEABAS',
-      subtitle: 'Limestone Extraction & Beneficiation Analysis System',
-      short:
-        'A Python-based analytical system designed to process and analyze experimental data from limestone extraction and beneficiation operations.',
-      category: 'Materials Engineering & Software',
-      tags: ['Python', 'Materials Engineering', 'Data Analysis', 'Mineral Processing'],
-      githubUrl: 'https://github.com/thodaniel3-sudo/LEABAS',
-      liveUrl: '',
-      detail: {
-        overview:
-          'LEABAS (Limestone Extraction & Beneficiation Analysis System) is a custom Python application built to analyze real-world experimental data from limestone processing. It takes data from physical operations — such as jaw crushing, ball milling, sieve analysis and froth floatation, — and calculates key material parameters to evaluate the efficiency of the beneficiation process.',
-        materials: [
-          'Feed mass data from jaw crusher and ball mill',
-          'Sieve analysis results (mass retained and mass passing)',
-          'Processing time parameters',
-          'Particle size distribution data',
-        ],
-        methods: [
-          'Python-based data processing and computation',
-          'Sieve analysis calculations (cumulative mass, percentage passing)',
-          'Feed rate and throughput analysis',
-          'Result visualization and reporting',
-        ],
-        properties: [
-          'Total feed mass',
-          'Mass passing through each sieve',
-          'Time-based processing rates',
-          'Beneficiation efficiency metrics',
-        ],
-        relevance:
-          'Demonstrates how software can be applied directly to mineral processing and materials engineering problems, turning raw experimental data into actionable engineering insights.',
-        focus:
-          'Bridging experimental mineral processing with computational data analysis using Python.',
-      },
-    },
-
-
-
-
     {
       id: 'gospel-pillars',
-      number: '06',
+      number: '08',
       title: 'Gospel Pillars Campus Fellowship',
       subtitle: 'Organization Biodata Platform',
       short:
@@ -364,7 +436,7 @@ export const profile = {
     },
     {
       id: 'materials-informatics-property-prediction',
-      number: '07',
+      number: '09',
       title: 'Materials Informatics Property Prediction Program',
       subtitle: 'Python Program for Property Estimation',
       short:

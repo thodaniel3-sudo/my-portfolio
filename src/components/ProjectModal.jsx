@@ -112,9 +112,21 @@ export default function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="btn-ghost"
               >
-                <Github size={16} /> View on GitHub
+                <Github size={16} /> {detail.githubBackendUrl ? 'Frontend Repo' : 'View on GitHub'}
               </a>
             )}
+            
+            {detail.githubBackendUrl && (
+              <a
+                href={detail.githubBackendUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                <Github size={16} /> Backend Repo
+              </a>
+            )}
+
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -125,7 +137,8 @@ export default function ProjectModal({ project, onClose }) {
                 <ExternalLink size={16} /> Live Demo
               </a>
             )}
-                       {!project.githubUrl && !project.liveUrl && (
+
+            {!project.githubUrl && !project.liveUrl && (
               <div className="flex items-center gap-2 pt-2">
                 <span className="w-8 h-px bg-emerald-500/50" />
                 <p className="text-xs tracking-widest uppercase text-emerald-400 font-medium">
