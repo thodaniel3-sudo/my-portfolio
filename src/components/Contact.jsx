@@ -185,9 +185,9 @@ function ContactForm() {
             Something went wrong. Please try again or email me directly.
           </p>
         )}
-        {status === 'idle' && (
+               {status === 'idle' && (
           <p className="text-xs text-ink-500">
-            Goes directly to my inbox — no email client needed.
+            Your message will be delivered directly to my inbox.
           </p>
         )}
       </div>
