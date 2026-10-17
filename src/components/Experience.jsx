@@ -11,9 +11,7 @@ export default function Experience() {
       <div className="container-x">
         <SectionReveal>
           <p className="eyebrow mb-3">Experience & Training</p>
-          <h2 className="heading max-w-3xl">
-            Research, academic activity, and professional experience.
-          </h2>
+          <h2 className="heading max-w-3xl">Research, academic activity, and professional experience.</h2>
         </SectionReveal>
 
         <div className="mt-14 grid md:grid-cols-2 gap-4">
@@ -31,15 +29,30 @@ export default function Experience() {
 
           {profile.training.map((item, i) => (
             <SectionReveal key={item.institution} delay={(profile.researchExperience.length + i) * 60}>
-              <div className="card p-6 md:p-8 h-full">
-                <div className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-emerald-400 mb-5">
-                  <Briefcase size={18} />
+              <div className="card p-6 md:p-8 h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-md border border-white/10 flex items-center justify-center text-emerald-400 mb-5">
+                    <Briefcase size={18} />
+                  </div>
+                  <p className="text-[10px] tracking-widest uppercase text-ink-500 mb-2">Training & Industrial Exposure</p>
+                  <h3 className="font-display text-lg text-ink-50 mb-3">{item.institution}</h3>
+                  <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                 </div>
-                <p className="text-[10px] tracking-widest uppercase text-ink-500 mb-2">
-                  Training & Industrial Exposure
-                </p>
-                <h3 className="font-display text-lg text-ink-50 mb-3">{item.institution}</h3>
-                <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
+
+                {/* TRAINING IMAGES BUTTONS */}
+                {item.images && item.images.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {item.images.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveImage(img)}
+                        className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
+                      >
+                        <ImageIcon size={14} /> View Image {idx + 1}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </SectionReveal>
           ))}
@@ -61,11 +74,11 @@ export default function Experience() {
                     <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                   </div>
                   
-                  {/* BUTTON TO VIEW IMAGE */}
+                  {/* LEADERSHIP IMAGES BUTTONS */}
                   {item.image && (
                     <button
                       onClick={() => setActiveImage(item.image)}
-                      className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors w-fit"
+                      className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors w-fit bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
                     >
                       <ImageIcon size={14} /> View Event Flyer
                     </button>

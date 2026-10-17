@@ -15,8 +15,6 @@ export default function ProjectModal({ project, onClose }) {
 
   if (!project) return null;
   const { detail } = project;
-
-  // Check if the project has GitHub links but no live demo
   const requiresSetup = (project.githubUrl || detail?.githubBackendUrl) && !project.liveUrl;
 
   return (
@@ -57,6 +55,20 @@ export default function ProjectModal({ project, onClose }) {
             ))}
           </div>
 
+          {/* PROJECT IMAGES GALLERY */}
+          {project.images && project.images.length > 0 && (
+            <div className="mt-8 space-y-4">
+              <p className="text-[11px] tracking-widest uppercase text-ink-500 mb-2">Project Gallery</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.images.map((img, idx) => (
+                  <div key={idx} className="rounded-xl overflow-hidden border border-white/10 bg-ink-950">
+                    <img src={img} alt={`${project.title} - Image ${idx + 1}`} className="w-full h-auto object-cover" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="mt-8 space-y-8">
             <Section title="Overview">{detail.overview}</Section>
 
@@ -90,10 +102,7 @@ export default function ProjectModal({ project, onClose }) {
               <Section title="Properties Studied" icon={<Target size={14} />}>
                 <div className="flex flex-wrap gap-2">
                   {detail.properties.map((p) => (
-                    <span
-                      key={p}
-                      className="text-xs px-3 py-1.5 rounded-md border border-white/10 text-ink-200"
-                    >
+                    <span key={p} className="text-xs px-3 py-1.5 rounded-md border border-white/10 text-ink-200">
                       {p}
                     </span>
                   ))}
@@ -107,7 +116,7 @@ export default function ProjectModal({ project, onClose }) {
             </Section>
           </div>
 
-          {/* DEVELOPER NOTE BANNER */}
+          {/* DEVELOPER NOTE */}
           {requiresSetup && (
             <div className="mt-10 p-4 rounded-lg border border-electric-400/30 bg-electric-500/5 flex gap-3 items-start">
               <Info size={18} className="text-electric-400 mt-0.5 shrink-0" />
@@ -124,39 +133,21 @@ export default function ProjectModal({ project, onClose }) {
 
           <div className="mt-10 flex flex-wrap gap-3">
             {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 <Github size={16} /> {detail.githubBackendUrl ? 'Frontend Repo' : 'View on GitHub'}
               </a>
             )}
-            
             {detail.githubBackendUrl && (
-              <a
-                href={detail.githubBackendUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
+              <a href={detail.githubBackendUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 <Github size={16} /> Backend Repo
               </a>
             )}
-
             {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <ExternalLink size={16} /> Live Demo
               </a>
             )}
-
-            {!project.githubUrl && !project.liveUrl && (
+            {!project.githubUrl && !project.liveUrl && !project.images && (
               <div className="flex items-center gap-2 pt-2">
                 <span className="w-8 h-px bg-emerald-500/50" />
                 <p className="text-xs tracking-widest uppercase text-emerald-400 font-medium">

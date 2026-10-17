@@ -10,18 +10,15 @@ export const profile = {
   tagline: 'Materials Science • Materials Informatics • AI • Sustainable Materials',
 
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
+
   // --- Contact ---
   email: 'thodaniel3@gmail.com',
   whatsapp: '+2348107247625',
   facebook: 'https://www.facebook.com/thomasdaniel263',
   github: 'https://github.com/thodaniel3-sudo/',
   linkedin: 'https://www.linkedin.com/in/daniel-thomas-90055b428',
-  xing: 'https://www.xing.com/profile/Daniel_Thomas052664', // <--- ADDED XING
-  
-  // If you REALLY want to add a dating profile, paste the URL here. 
-  // Otherwise, leave it as an empty string '' to hide it.
-  dating: '', 
-
+  xing: 'https://www.xing.com/profile/Daniel_Thomas052664',
+  dating: '',
   canonicalUrl: 'https://daniel-thomas.vercel.app',
 
   // --- Hero ---
@@ -179,9 +176,10 @@ export const profile = {
       ],
       githubUrl: '',
       liveUrl: '',
+      images: ['/composite-results.png'],
       detail: {
         overview:
-          'A final-year materials engineering project focused on developing an eco-friendly epoxy hybrid composite using bio-derived and mineral reinforcements for potential automotive applications.',
+          'A final-year materials engineering project focused on developing an eco-friendly epoxy hybrid composite using bio-derived and mineral reinforcements for potential automotive applications. Tested at Midwal Engineering Services Limited laboratory.',
         materials: ['Epoxy resin', 'Cotton wool', 'Cow horn', 'Limestone'],
         methods: [
           'Formulation F1: 100% epoxy',
@@ -204,8 +202,37 @@ export const profile = {
       },
     },
     {
-      id: 'leabas',
+      id: 'eco-charcoal',
       number: '02',
+      title: 'Eco-Friendly Bio-Charcoal Production',
+      subtitle: 'Sustainable Alternative Fuel',
+      short:
+        'Developed an eco-friendly charcoal alternative made from agricultural waste (rice husks, groundnut shells, and sawdust) to provide a sustainable, clean-burning cooking fuel.',
+      category: 'Sustainable Engineering',
+      tags: ['Sustainable Materials', 'Waste Valorization', 'Renewable Energy', 'Materials Engineering'],
+      githubUrl: '',
+      liveUrl: '',
+      images: ['/charcoal-results.jpeg'],
+      detail: {
+        overview:
+          'An engineering project focused on transforming agricultural waste into a viable energy source. By carbonizing rice husks, groundnut shells, and sawdust in the absence of oxygen (pyrolysis), the materials were converted into carbon. Binders and additives were then applied to cause coagulation, followed by compression and drying to form high-quality, functional charcoal briquettes for cooking.',
+        materials: ['Rice husks', 'Groundnut shells', 'Sawdust', 'Binders & Additives'],
+        methods: [
+          'Carbonization in an oxygen-free environment',
+          'Application of binders for coagulation',
+          'Compression into shape',
+          'Drying process',
+        ],
+        properties: ['Combustion efficiency', 'Structural integrity', 'Burn time'],
+        relevance:
+          'Provides a sustainable solution to deforestation and waste management by turning agricultural by-products into a usable, clean cooking fuel.',
+        focus:
+          'Waste-to-wealth transformation and sustainable energy solutions.',
+      },
+    },
+    {
+      id: 'leabas',
+      number: '03',
       title: 'LEABAS',
       subtitle: 'Limestone Extraction & Beneficiation Analysis System',
       short:
@@ -243,7 +270,7 @@ export const profile = {
     },
     {
       id: 'mwcnt-characterization',
-      number: '03',
+      number: '04',
       title: 'MWCNT Characterization and Analysis System',
       subtitle: 'Scientific Software for Materials Characterization',
       short:
@@ -285,7 +312,7 @@ export const profile = {
     },
     {
       id: 'hybrid-composite-prediction',
-      number: '04',
+      number: '05',
       title: 'Hybrid Composite Prediction System (HCPS)',
       subtitle: 'ML-Driven Materials Property Prediction',
       short:
@@ -322,7 +349,7 @@ export const profile = {
     },
     {
       id: 'attendance-system',
-      number: '05',
+      number: '06',
       title: 'QR Code-Based Student Attendance Management System',
       subtitle: 'Full-Stack Web Application',
       short:
@@ -361,7 +388,7 @@ export const profile = {
     },
     {
       id: 'cgpa-calculator',
-      number: '06',
+      number: '07',
       title: 'CGPA Calculator',
       subtitle: 'Student Academic Portal & PDF Generator',
       short:
@@ -397,7 +424,7 @@ export const profile = {
     },
     {
       id: 'mme-portal',
-      number: '07',
+      number: '08',
       title: 'MME Department Portal',
       subtitle: 'Faculty Information & Gallery Portal',
       short:
@@ -433,7 +460,7 @@ export const profile = {
     },
     {
       id: 'telegram-bot',
-      number: '08',
+      number: '09',
       title: 'Automated Telegram Forecast Bot',
       subtitle: 'AI Assistant for Data Forecasting',
       short:
@@ -469,7 +496,7 @@ export const profile = {
     },
     {
       id: 'university-finder',
-      number: '09',
+      number: '10',
       title: 'University Finder',
       subtitle: 'Web Platform for Academic Discovery',
       short:
@@ -507,7 +534,7 @@ export const profile = {
     },
     {
       id: 'gospel-pillars',
-      number: '10',
+      number: '11',
       title: 'Gospel Pillars Campus Fellowship',
       subtitle: 'Organization Biodata Platform',
       short:
@@ -530,7 +557,7 @@ export const profile = {
     },
     {
       id: 'materials-informatics-property-prediction',
-      number: '11',
+      number: '12',
       title: 'Materials Informatics Property Prediction Program',
       subtitle: 'Python Program for Property Estimation',
       short:
@@ -588,10 +615,17 @@ export const profile = {
     {
       institution: 'NITDA (Jul–Dec 2025)',
       description: 'Gained practical exposure to data management, cloud computing (AWS, Azure, Google Cloud), Python programming, web development, database management, and system deployment.',
+      images: ['/nitda-lab.jpeg'],
     },
     {
       institution: 'Federal University Entrepreneurship Centre (2023–2024)',
-      description: 'Instructed participants in soap, cream, and related product preparation.',
+      description: 'Instructed participants in soap, cream, and related product preparation. Worked with shea butter and other ingredients to produce skin glow oil, body cream, hair cream, hair growth cream, washing/bathing soaps, and organic soap.',
+      images: ['/entrepreneurship-products.jpeg'],
+    },
+    {
+      institution: 'Power Holding Company of Nigeria (PHCN) - Afam, Rivers State',
+      description: 'Industrial training in the Electrical/Mechanical Engineering Department. Performed maintenance on gas turbines (cleaning filters to optimize efficiency due to atmospheric pollution) and aligned armored cables for proper electricity conduction.',
+      images: ['/phcn-turbine.jpeg', '/phcn-site.jpeg'],
     }
   ],
 
@@ -601,12 +635,11 @@ export const profile = {
       role: 'Vice President, MME Department',
       organization: 'Federal University of Technology, Minna',
       date: '2024',
-      description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom.',
-    image: '/nammes-event.jpeg', 
-    
+      description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom. Hosted a national career webinar featuring speakers from the UK and across Nigeria.',
+      image: '/nammes-event.png',
     },
     {
-      role: 'ELCOM Chairman',
+      role: 'EICOM Chairman',
       organization: 'Student Political Body',
       date: '2026',
       description: 'Coordinated electoral activities and oversaw the conduct of elections for student political positions as chairman.',
@@ -623,7 +656,7 @@ export const profile = {
       date: '2015–2020',
       description: 'Supported teaching, classroom administration, student supervision, and the maintenance of an orderly learning environment.',
     },
-        {
+    {
       role: 'Class Monitor & Academic Lead',
       organization: 'Secondary School',
       date: '2006–2007',
@@ -654,7 +687,7 @@ export const profile = {
       'Materials efficiency',
     ],
     description:
-      'My final-year project explored how bio-derived and mineral reinforcements can be used within polymer matrices to reduce reliance on virgin materials — an example of how waste streams can be re-engineered into functional material systems.',
+      'My final-year project explored how bio-derived and mineral reinforcements can be used within polymer matrices to reduce reliance on virgin materials, while my eco-charcoal project transformed agricultural waste into a viable energy source — examples of how waste streams can be re-engineered into functional material systems.',
   },
 
   // --- Future Direction ---
