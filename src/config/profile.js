@@ -616,11 +616,11 @@ export const profile = {
       date: '2015–2020',
       description: 'Supported teaching, classroom administration, student supervision, and the maintenance of an orderly learning environment.',
     },
-    {
-      role: 'Class Prefect',
+        {
+      role: 'Class Monitor & Academic Lead',
       organization: 'Secondary School',
       date: '2006–2007',
-      description: 'Supervised class activities, maintained discipline, and supported the effective day-to-day management of the classroom.',
+      description: 'Served as the top-ranked student and academic representative, coordinating class activities, maintaining an orderly learning environment, and serving as the liaison between students and teachers.',
     },
   ],
 
