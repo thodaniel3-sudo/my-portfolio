@@ -1,10 +1,10 @@
-import { FlaskConical, Briefcase, Rocket, Users } from 'lucide-react';
+import { FlaskConical, Briefcase } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
 export default function Experience() {
   return (
-    <section className="section relative">
+    <section id="experience" className="section relative"> {/* <--- ADDED ID HERE */}
       <div className="container-x">
         <SectionReveal>
           <p className="eyebrow mb-3">Experience & Training</p>

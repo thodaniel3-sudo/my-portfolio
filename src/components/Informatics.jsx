@@ -6,7 +6,7 @@ const pipelineIcons = [Database, Cpu, Brain, Target, Sliders, GitBranch];
 
 export default function Informatics() {
   return (
-    <section className="section relative overflow-hidden">
+       <section id="informatics" className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/[0.03] to-transparent" />
 
       <div className="container-x relative">

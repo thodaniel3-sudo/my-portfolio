@@ -59,7 +59,7 @@ export const profile = {
     { title: 'Data-driven Materials Engineering', description: 'Integrating engineering with analytics pipelines.' },
   ],
 
-  // --- Education & Awards ---
+  // --- Education ---
   education: [
     {
       institution: 'Federal University of Technology, Minna',
@@ -679,6 +679,9 @@ export const profile = {
     { label: 'Research', href: '#research' },
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Informatics', href: '#informatics' },
+    { label: 'Sustainability', href: '#sustainability' },
     { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ],

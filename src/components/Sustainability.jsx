@@ -6,7 +6,7 @@ const focusIcons = [Recycle, Leaf, Sprout, Car, CircleDollarSign, Gauge];
 
 export default function Sustainability() {
   return (
-    <section className="section relative">
+      <section id="sustainability" className="section relative">
       <div className="container-x">
         <SectionReveal>
           <p className="eyebrow mb-3">Sustainability</p>
