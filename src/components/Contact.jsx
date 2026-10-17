@@ -1,4 +1,5 @@
-import { Mail, Github, Linkedin, Facebook, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Github, Linkedin, Facebook, ArrowUpRight, MessageCircle, Loader2 } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
@@ -56,7 +57,7 @@ export default function Contact() {
                 />
               </div>
 
-              <ContactForm email={profile.email} />
+              <ContactForm />
             </div>
           </div>
         </SectionReveal>
@@ -95,23 +96,35 @@ function ContactCard({ icon, label, value, href }) {
   );
 }
 
-function ContactForm({ email }) {
-  const isPlaceholder = !email || email === 'YOUR_EMAIL_HERE';
+function ContactForm() {
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    if (isPlaceholder) {
-      alert(
-        'Email not configured yet.\n\nOpen src/config/profile.js and replace YOUR_EMAIL_HERE with your real address.'
-      );
-      return;
+    setStatus('loading');
+
+    const formData = new FormData(e.target);
+    
+    // YOUR WEB3FORMS ACCESS KEY
+    formData.append("access_key", "df594329-010c-4c8f-a11c-1047792243bd"); 
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        e.target.reset(); // Clear the form
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
     }
-    const data = new FormData(e.target);
-    const subject = encodeURIComponent(data.get('subject') || 'Portfolio contact');
-    const body = encodeURIComponent(
-      `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`
-    );
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -135,6 +148,7 @@ function ContactForm({ email }) {
       </div>
 
       <input
+        required
         name="subject"
         placeholder="Subject"
         className="mt-3 w-full px-4 py-3 rounded-md bg-white/[0.02] border border-white/10 text-sm text-ink-100 placeholder:text-ink-500 focus:border-emerald-500/60 focus:outline-none transition-colors"
@@ -149,12 +163,33 @@ function ContactForm({ email }) {
       />
 
       <div className="mt-5 flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn-primary">
-          <Mail size={16} /> Send Message
+        <button 
+          type="submit" 
+          disabled={status === 'loading'}
+          className="btn-primary disabled:opacity-70 disabled:cursor-not-allowed"
+        >
+          {status === 'loading' ? (
+            <> <Loader2 size={16} className="animate-spin" /> Sending... </>
+          ) : (
+            <> <Mail size={16} /> Send Message </>
+          )}
         </button>
-        <p className="text-xs text-ink-500">
-          Opens your email client — no data is stored.
-        </p>
+        
+        {status === 'success' && (
+          <p className="text-xs text-emerald-400 font-medium">
+            Message sent successfully! I will get back to you soon.
+          </p>
+        )}
+        {status === 'error' && (
+          <p className="text-xs text-red-400 font-medium">
+            Something went wrong. Please try again or email me directly.
+          </p>
+        )}
+        {status === 'idle' && (
+          <p className="text-xs text-ink-500">
+            Goes directly to my inbox — no email client needed.
+          </p>
+        )}
       </div>
     </form>
   );
