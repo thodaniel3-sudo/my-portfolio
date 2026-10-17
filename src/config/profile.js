@@ -10,13 +10,18 @@ export const profile = {
   tagline: 'Materials Science • Materials Informatics • AI • Sustainable Materials',
 
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
-
   // --- Contact ---
   email: 'thodaniel3@gmail.com',
   whatsapp: '+2348107247625',
   facebook: 'https://www.facebook.com/thomasdaniel263',
   github: 'https://github.com/thodaniel3-sudo/',
   linkedin: 'https://www.linkedin.com/in/daniel-thomas-90055b428',
+  xing: 'https://www.xing.com/profile/Daniel_Thomas052664', // <--- ADDED XING
+  
+  // If you REALLY want to add a dating profile, paste the URL here. 
+  // Otherwise, leave it as an empty string '' to hide it.
+  dating: '', 
+
   canonicalUrl: 'https://daniel-thomas.vercel.app',
 
   // --- Hero ---

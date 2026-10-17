@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Facebook, ArrowUpRight, MessageCircle, Loader2 } from 'lucide-react';
+import { Mail, Github, Linkedin, Facebook, ArrowUpRight, MessageCircle, Loader2, Globe, Heart } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
@@ -15,12 +15,12 @@ export default function Contact() {
             <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-emerald-500/10 blur-[100px]" />
             <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-electric-500/5 blur-[100px]" />
 
-            <div className="relative max-w-3xl">
+            <div className="relative max-w-4xl">
               <p className="eyebrow mb-4">Contact</p>
               <h2 className="heading">{profile.contact.headline}</h2>
               <p className="body-text mt-6 text-base md:text-lg">{profile.contact.text}</p>
 
-              <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                 <ContactCard
                   icon={<Mail size={16} />}
                   label="Email"
@@ -49,12 +49,30 @@ export default function Contact() {
                   href={profile.linkedin}
                 />
 
+                {/* NEW XING CARD */}
+                <ContactCard
+                  icon={<Globe size={16} />}
+                  label="Xing (German profile)"
+                  value={isUrlPlaceholder(profile.xing) ? 'Set in profile.js' : 'View profile'}
+                  href={profile.xing}
+                />
+
                 <ContactCard
                   icon={<Facebook size={16} />}
                   label="Facebook"
                   value={isUrlPlaceholder(profile.facebook) ? 'Set in profile.js' : 'View profile'}
                   href={profile.facebook}
                 />
+
+                {/* OPTIONAL DATING CARD - Only shows if you add a URL in profile.js */}
+                {profile.dating && (
+                  <ContactCard
+                    icon={<Heart size={16} />}
+                    label="Dating"
+                    value="View profile"
+                    href={profile.dating}
+                  />
+                )}
               </div>
 
               <ContactForm />
@@ -97,15 +115,13 @@ function ContactCard({ icon, label, value, href }) {
 }
 
 function ContactForm() {
-  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+  const [status, setStatus] = useState('idle');
 
   const onSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
 
     const formData = new FormData(e.target);
-    
-    // YOUR WEB3FORMS ACCESS KEY
     formData.append("access_key", "df594329-010c-4c8f-a11c-1047792243bd"); 
 
     try {
@@ -118,7 +134,7 @@ function ContactForm() {
 
       if (data.success) {
         setStatus('success');
-        e.target.reset(); // Clear the form
+        e.target.reset();
       } else {
         setStatus('error');
       }
@@ -185,7 +201,7 @@ function ContactForm() {
             Something went wrong. Please try again or email me directly.
           </p>
         )}
-               {status === 'idle' && (
+        {status === 'idle' && (
           <p className="text-xs text-ink-500">
             Your message will be delivered directly to my inbox.
           </p>
