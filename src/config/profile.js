@@ -600,9 +600,9 @@ export const profile = {
       title: 'Teaching & Volunteering',
       description: 'Tutored students in physics, chemistry, and mathematics at primary, junior-secondary, and university levels. Taught engineering mathematics, heat and mass transfer, transfer functions, ionic equilibrium diagrams, Fourier series, and Laplace transforms. Built websites and applications for people.',
     },
-    {
+      {
       title: 'Mineral Processing Laboratory (Sep–Nov 2026)',
-      description: 'Practical exposure to bauxite and mineral-processing activities, jaw crushing, sorting equipment, testing machines, casting, corrosion studies, fabrication, and analysis.',
+      description: 'Practical exposure to mineral-processing activities involving zinc ore, sphalerite, limestone, hematite, and barite. Covered extraction, beneficiation, comminution, jaw crushing, sorting equipment, testing machines, casting, corrosion studies, fabrication, and analysis.',
     },
     {
       title: 'Nanotechnology Research Group (2024)',

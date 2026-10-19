@@ -39,17 +39,24 @@ export default function Experience() {
                   <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                 </div>
 
+                {/* TRAINING IMAGES BUTTONS */}
                 {item.images && item.images.length > 0 && (
                   <div className="mt-5 flex flex-wrap gap-2">
-                    {item.images.map((img, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setActiveImage(img)}
-                        className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
-                      >
-                        <ImageIcon size={14} /> View Certificate
-                      </button>
-                    ))}
+                    {item.images.map((img, idx) => {
+                      // Handle both old string format and new object format
+                      const imgSrc = typeof img === 'string' ? img : img.src;
+                      const imgLabel = typeof img === 'string' ? `View Image ${idx + 1}` : img.label;
+                      
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => setActiveImage(imgSrc)}
+                          className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
+                        >
+                          <ImageIcon size={14} /> {imgLabel}
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>
