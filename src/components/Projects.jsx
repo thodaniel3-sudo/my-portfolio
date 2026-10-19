@@ -15,7 +15,7 @@ export default function Projects() {
         <SectionReveal>
           <p className="eyebrow mb-3">Selected Work</p>
           <h2 className="heading max-w-3xl">
-            Engineering projects in materials, computation, and software.
+            Engineering projects in materials, computation, and software etc.
           </h2>
         </SectionReveal>
 

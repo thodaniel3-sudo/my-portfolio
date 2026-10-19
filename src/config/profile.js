@@ -357,7 +357,7 @@ export const profile = {
       category: 'Full-Stack Development',
       tags: ['Node.js', 'Express.js', 'JavaScript', 'Supabase', 'Web Development'],
       githubUrl: 'https://github.com/thodaniel3/attendance-frontend',
-      liveUrl: '',
+      liveUrl: 'https://atendance-management.vercel.app', // <--- ADD THIS LINE
       detail: {
         overview:
           'Designed and developed a web-based attendance management system with a separate frontend and backend to streamline student registration and attendance tracking. The system enables students to register and download their unique QR codes, which lecturers scan to identify students and record attendance electronically. The application integrates database management and backend verification to support organized attendance records, reduce manual processes, and improve the efficiency of classroom attendance management.',
@@ -610,6 +610,8 @@ export const profile = {
     },
   ],
 
+
+
   // --- Industrial Training ---
   training: [
     {
@@ -626,20 +628,26 @@ export const profile = {
       institution: 'Power Holding Company of Nigeria (PHCN) - Afam, Rivers State',
       description: 'Industrial training in the Electrical/Mechanical Engineering Department. Performed maintenance on gas turbines (cleaning filters to optimize efficiency due to atmospheric pollution) and aligned armored cables for proper electricity conduction.',
       images: ['/phcn-turbine.jpeg', '/phcn-site.jpeg'],
+    },
+    {
+      institution: 'General Health, Safety and Environment Management (Levels 1 & 2)',
+      description: 'Certified by Movalue Consulting & IAPM Nigeria. Trained in accident causation (unsafe acts/conditions), fire safety and extinguisher usage, and general safety maintenance for workshops and construction sites.',
+      images: ['/hse-certificate.png'],
     }
   ],
 
-  // --- Leadership & Responsibilities ---
+
+    // --- Leadership & Responsibilities ---
   leadership: [
     {
       role: 'Vice President, MME Department',
       organization: 'Federal University of Technology, Minna',
       date: '2024',
       description: 'Provided student leadership and supported departmental activities. Organized online programs for fellow students via Zoom. Hosted a national career webinar featuring speakers from the UK and across Nigeria.',
-      image: '/nammes-event.png',
+      image: '/nammes-event.jpeg',
     },
     {
-      role: 'EICOM Chairman',
+      role: 'ELCOM Chairman',
       organization: 'Student Political Body',
       date: '2026',
       description: 'Coordinated electoral activities and oversaw the conduct of elections for student political positions as chairman.',
@@ -662,6 +670,17 @@ export const profile = {
       date: '2006–2007',
       description: 'Served as the top-ranked student and academic representative, coordinating class activities, maintaining an orderly learning environment, and serving as the liaison between students and teachers.',
     },
+  ],
+
+   // --- Certifications ---
+  certifications: [
+    {
+      title: 'General Health, Safety and Environment Management (Levels 1 & 2)',
+      issuer: 'Movalue Consulting & IAPM Nigeria Network',
+      date: 'August 2022',
+      description: 'Comprehensive training on industrial safety, hazard identification, fire safety, and workshop/site safety protocols.',
+      image: '/hse-certificate.png',
+    }
   ],
 
   // --- Materials Informatics Pipeline ---

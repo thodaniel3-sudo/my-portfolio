@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FlaskConical, Briefcase, Image as ImageIcon, X } from 'lucide-react';
+import { FlaskConical, Briefcase, Image as ImageIcon, X, ShieldCheck } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
@@ -39,7 +39,6 @@ export default function Experience() {
                   <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                 </div>
 
-                {/* TRAINING IMAGES BUTTONS */}
                 {item.images && item.images.length > 0 && (
                   <div className="mt-5 flex flex-wrap gap-2">
                     {item.images.map((img, idx) => (
@@ -48,7 +47,7 @@ export default function Experience() {
                         onClick={() => setActiveImage(img)}
                         className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
                       >
-                        <ImageIcon size={14} /> View Image {idx + 1}
+                        <ImageIcon size={14} /> View Certificate
                       </button>
                     ))}
                   </div>
@@ -74,7 +73,6 @@ export default function Experience() {
                     <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                   </div>
                   
-                  {/* LEADERSHIP IMAGES BUTTONS */}
                   {item.image && (
                     <button
                       onClick={() => setActiveImage(item.image)}
@@ -88,6 +86,40 @@ export default function Experience() {
             </div>
           </div>
         </SectionReveal>
+
+        {/* CERTIFICATIONS SECTION */}
+        {profile.certifications && (
+          <SectionReveal delay={300}>
+            <div className="mt-16">
+              <h3 className="font-display text-2xl text-ink-50 mb-6">Certifications</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {profile.certifications.map((cert) => (
+                  <div key={cert.title} className="card p-6 border-l-2 border-l-electric-400 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-start justify-between gap-4 mb-2">
+                        <h4 className="font-display text-lg text-ink-50">{cert.title}</h4>
+                        <span className="text-xs text-electric-400 shrink-0">{cert.date}</span>
+                      </div>
+                      <p className="text-xs text-ink-500 mb-3">{cert.issuer}</p>
+                      {cert.description && (
+                        <p className="text-sm text-ink-400 leading-relaxed mb-4">{cert.description}</p>
+                      )}
+                    </div>
+                    
+                    {cert.image && (
+                      <button
+                        onClick={() => setActiveImage(cert.image)}
+                        className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors w-fit bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
+                      >
+                        <ShieldCheck size={14} /> View Certificate
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionReveal>
+        )}
       </div>
 
       {/* FULL SCREEN IMAGE MODAL */}
@@ -106,8 +138,8 @@ export default function Experience() {
             </button>
             <img
               src={activeImage}
-              alt="Event Flyer"
-              className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              alt="Certificate or Flyer"
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl bg-white"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
