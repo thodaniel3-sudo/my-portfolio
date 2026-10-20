@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Menu, X, Github, Linkedin, Sun, Moon, Mail } from 'lucide-react';
 import profile from '../config/profile.js';
 import { useScrollSpy } from '../hooks/useScrollSpy.js';
@@ -9,7 +9,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
-  const sectionIds = profile.nav.map((n) => n.href.replace('#', ''));
+  // LOCK the array so it doesn't trigger infinite re-renders
+  const sectionIds = useMemo(() => {
+    return profile.nav.map((n) => n.href.replace('#', ''));
+  }, []);
+  
   const active = useScrollSpy(sectionIds);
 
   useEffect(() => {
@@ -46,13 +50,13 @@ export default function Navbar() {
         <a
           href="#home"
           onClick={go('#home')}
-          className="flex items-center gap-2 font-display font-semibold tracking-tight"
+          className="flex items-center gap-2 font-display font-semibold tracking-tight shrink-0"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.8)]" />
           <span className="text-ink-50 dark:text-ink-50">Daniel Thomas</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden lg:flex items-center gap-1">
+        <nav aria-label="Primary" className="hidden lg:flex items-center gap-0.5 xl:gap-1">
           {profile.nav.map((item) => {
             const isActive = active === item.href.replace('#', '');
             return (
@@ -60,20 +64,20 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={go(item.href)}
-                className={`relative px-3 py-2 text-sm transition-colors ${
+                className={`relative px-2 xl:px-3 py-2 text-[13px] xl:text-sm transition-colors ${
                   isActive ? 'text-emerald-400' : 'text-ink-300 hover:text-ink-50'
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute left-3 right-3 -bottom-0.5 h-px bg-emerald-500/70" />
+                  <span className="absolute left-2 right-2 -bottom-0.5 h-px bg-emerald-500/70" />
                 )}
               </a>
             );
           })}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2 shrink-0">
           <IconLink href={profile.github} label="GitHub">
             <Github size={16} />
           </IconLink>
@@ -90,7 +94,7 @@ export default function Navbar() {
           <a
             href={profile.email !== 'YOUR_EMAIL_HERE' ? `mailto:${profile.email}` : '#contact'}
             onClick={profile.email === 'YOUR_EMAIL_HERE' ? go('#contact') : undefined}
-            className="btn-primary !px-4 !py-2 text-xs"
+            className="btn-primary !px-3 xl:!px-4 !py-2 text-xs"
           >
             <Mail size={14} /> Contact
           </a>
@@ -112,13 +116,13 @@ export default function Navbar() {
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="container-x py-8 flex flex-col gap-1">
+        <div className="container-x py-8 flex flex-col gap-1 overflow-y-auto h-full pb-20">
           {profile.nav.map((item, i) => (
             <a
               key={item.label}
               href={item.href}
               onClick={go(item.href)}
-              className="py-4 border-b border-white/5 text-2xl font-display font-medium text-ink-100 hover:text-emerald-400 transition-colors"
+              className="py-3 border-b border-white/5 text-xl font-display font-medium text-ink-100 hover:text-emerald-400 transition-colors"
               style={{
                 transform: open ? 'translateY(0)' : 'translateY(12px)',
                 opacity: open ? 1 : 0,

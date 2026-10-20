@@ -4,18 +4,34 @@ export function useScrollSpy(ids, offset = 120) {
   const [active, setActive] = useState(ids[0] || '');
 
   useEffect(() => {
-    const onScroll = () => {
-      const scrollPos = window.scrollY + offset;
-      let current = ids[0];
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPos) current = id;
+    const handleScroll = () => {
+      // If we are at the very bottom of the page, highlight the last section
+      if (window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight - 20) {
+        setActive(ids[ids.length - 1]);
+        return;
       }
-      setActive(current);
+
+      let currentSection = ids[0];
+      
+      for (const id of ids) {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          
+          // If the top of the section is above the middle of our screen
+          // (We use 250px here to guarantee it catches it early)
+          if (rect.top <= 250) {
+            currentSection = id;
+          }
+        }
+      }
+      
+      setActive(currentSection);
     };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [ids, offset]);
 
   return active;

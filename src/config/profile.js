@@ -590,7 +590,7 @@ export const profile = {
     },
   ],
 
-  // --- Research / Academic Experience & Training ---
+   // --- Research / Academic Experience & Training ---
   researchExperience: [
     {
       title: 'Research & Academic Projects (2021–2026)',
@@ -600,7 +600,7 @@ export const profile = {
       title: 'Teaching & Volunteering',
       description: 'Tutored students in physics, chemistry, and mathematics at primary, junior-secondary, and university levels. Taught engineering mathematics, heat and mass transfer, transfer functions, ionic equilibrium diagrams, Fourier series, and Laplace transforms. Built websites and applications for people.',
     },
-      {
+    {
       title: 'Mineral Processing Laboratory (Sep–Nov 2026)',
       description: 'Practical exposure to mineral-processing activities involving zinc ore, sphalerite, limestone, hematite, and barite. Covered extraction, beneficiation, comminution, jaw crushing, sorting equipment, testing machines, casting, corrosion studies, fabrication, and analysis.',
     },
@@ -609,7 +609,6 @@ export const profile = {
       description: 'Attended seminars and gained exposure to nanotechnology and advanced-materials research; received a certificate of participation.',
     },
   ],
-
 
 
   // --- Industrial Training ---
@@ -711,28 +710,28 @@ export const profile = {
       issuer: 'Purebliss Skincare',
       date: 'April 2021',
       description: 'Completed comprehensive training in the formulation and production of organic skincare products.',
-      image: '/purebliss-cert.png',
+      image: '/purebliss-cert.jpeg',
     },
     {
       title: 'FUTEC Business Idea Competition (Season 5)',
       issuer: 'FUT Minna Entrepreneurship Centre',
       date: 'January 2023',
       description: 'Participated in the Business Idea Competition and was admitted into the FUTEC Incubation Hub.',
-      image: '/futec-idea-cert.png',
+      image: '/futec-idea-cert.jpeg',
     },
     {
       title: 'Corporate Ethics, Skills, & Job Awareness',
       issuer: 'Megarich Networks and Consultants Ltd',
       date: 'December 2022',
       description: 'Training in corporate ethics, networking, human relations, and job awareness.',
-      image: '/megarich-cert.png',
+      image: '/megarich-cert.jpeg',
     },
     {
       title: 'Inventors’ Week 2025',
       issuer: 'FUTEC Incubation Hub & CHAIN-Project',
       date: 'April - May 2025',
       description: 'Participated in Inventors\' Week themed "Food Value Chain Enhancement".',
-      image: '/inventors-week-cert.png',
+      image: '/inventors-week-cert.jpeg',
     },
     // Research & Academics
     {
@@ -747,7 +746,7 @@ export const profile = {
       issuer: 'ACEMFS & Nanotechnology Research Group, FUT Minna',
       date: 'June 2024',
       description: 'Participated in the 1st Short Course/Workshop on the Application of Nanotechnology for Sustainable Development.',
-      image: '/nanotech-workshop-cert.png',
+      image: '/nanotech-workshop-cert.jpeg',
     },
     // Online Training & Internships
     {
@@ -755,7 +754,7 @@ export const profile = {
       issuer: 'Nihub & FUT Minna',
       date: 'November 2025',
       description: 'Successfully completed internship at Nihub, recognized for enthusiasm, dedication, and valuable contributions.',
-      image: '/nihub-cert.png',
+      image: '/nihub-cert.jpg',
     },
     {
       title: 'Online Training: START',
@@ -822,18 +821,17 @@ export const profile = {
   footer: {
     copyright: `© ${new Date().getFullYear()} Daniel Thomas. All rights reserved.`,
   },
-
   // --- Navigation ---
   nav: [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Research', href: '#research' },
+    { label: 'Education', href: '#education' }, // Moved up to match App.jsx
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
     { label: 'Informatics', href: '#informatics' },
     { label: 'Sustainability', href: '#sustainability' },
-    { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ],
 };
