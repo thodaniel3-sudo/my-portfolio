@@ -675,6 +675,14 @@ export const profile = {
   // --- Certifications ---
   certifications: [
     // Professional Engineering & Safety
+     {
+      title: 'The Complete Full-Stack Web Development Bootcamp',
+      issuer: 'Udemy (Instructor: Dr. Angela Yu)',
+      date: 'October 2026',
+      description: 'Completed a comprehensive 62-hour bootcamp covering front-end and back-end development, including HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and REST APIs.',
+      image: '/udemy-fullstack-cert.jpg',
+    },
+
     {
       title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
       issuer: 'Oracle Corporation',
