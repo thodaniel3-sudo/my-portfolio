@@ -672,8 +672,17 @@ export const profile = {
     },
   ],
 
+
   // --- Certifications ---
   certifications: [
+    // Professional Engineering & Safety
+    {
+      title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
+      issuer: 'Oracle Corporation',
+      date: 'July 2025',
+      description: 'Globally recognized certification validating foundational knowledge of Oracle Cloud Infrastructure (OCI) core services, security, architecture, and cloud concepts. Valid until July 2027.',
+      pdf: '/oracle-cloud-certificate.pdf',
+    },
     {
       title: 'General Health, Safety and Environment Management (Levels 1 & 2)',
       issuer: 'Movalue Consulting & IAPM Nigeria Network',
@@ -681,21 +690,90 @@ export const profile = {
       description: 'Comprehensive training on industrial safety, hazard identification, fire safety, and workshop/site safety protocols.',
       image: '/hse-certificate.png',
     },
-        {
+    // IT, Ethics & Computing
+    {
       title: 'IT Ethics: Professionalism and Ethics in Computing',
       issuer: 'Charles Sturt University (via FutureLearn)',
       date: 'August 2020',
-      description: 'Explored the history of ethics in IT, the impact of an ethical approach to computing, and the application of ethical theories to moral dilemmas involving computing professionals (e.g., Australian Computer Society Code of Professional Conduct).',
-      pdf: '/it-ethics-certificate.pdf', // <--- CHANGED FROM image TO pdf
+      description: 'Explored the history of ethics in IT, the impact of an ethical approach to computing, and the application of ethical theories to moral dilemmas involving computing professionals.',
+      pdf: '/it-ethics-certificate.pdf',
     },
-        {
-      title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
-      issuer: 'Oracle Corporation',
-      date: 'July 2025',
-      description: 'Globally recognized certification validating foundational knowledge of Oracle Cloud Infrastructure (OCI) core services, security, architecture, and cloud concepts. Valid until July 2027.',
-      pdf: '/oracle-cloud-certificate.pdf',
-    }
+    {
+      title: 'ICDL Profile Certificate',
+      issuer: 'ICDL',
+      date: 'September - November 2025',
+      description: 'Successfully completed modules in Computer Essentials, Online Essentials, Documents, and Spreadsheets.',
+      pdf: '/icdl-certificate.pdf',
+    },
+    // Entrepreneurship & Innovation
+    {
+      title: 'Certificate in Making Organic/Natural Skincare Products',
+      issuer: 'Purebliss Skincare',
+      date: 'April 2021',
+      description: 'Completed comprehensive training in the formulation and production of organic skincare products.',
+      image: '/purebliss-cert.png',
+    },
+    {
+      title: 'FUTEC Business Idea Competition (Season 5)',
+      issuer: 'FUT Minna Entrepreneurship Centre',
+      date: 'January 2023',
+      description: 'Participated in the Business Idea Competition and was admitted into the FUTEC Incubation Hub.',
+      image: '/futec-idea-cert.png',
+    },
+    {
+      title: 'Corporate Ethics, Skills, & Job Awareness',
+      issuer: 'Megarich Networks and Consultants Ltd',
+      date: 'December 2022',
+      description: 'Training in corporate ethics, networking, human relations, and job awareness.',
+      image: '/megarich-cert.png',
+    },
+    {
+      title: 'Inventors’ Week 2025',
+      issuer: 'FUTEC Incubation Hub & CHAIN-Project',
+      date: 'April - May 2025',
+      description: 'Participated in Inventors\' Week themed "Food Value Chain Enhancement".',
+      image: '/inventors-week-cert.png',
+    },
+    // Research & Academics
+    {
+      title: 'NAMMES Nigeria Membership',
+      issuer: 'National Association of Metallurgical and Materials Engineering Students',
+      date: 'September 2025',
+      description: 'Registered member of NAMMES Nigeria.',
+      pdf: '/nammes-membership.pdf',
+    },
+    {
+      title: 'Nanotechnology for Sustainable Development Workshop',
+      issuer: 'ACEMFS & Nanotechnology Research Group, FUT Minna',
+      date: 'June 2024',
+      description: 'Participated in the 1st Short Course/Workshop on the Application of Nanotechnology for Sustainable Development.',
+      image: '/nanotech-workshop-cert.png',
+    },
+    // Online Training & Internships
+    {
+      title: 'Nihub Internship Certificate',
+      issuer: 'Nihub & FUT Minna',
+      date: 'November 2025',
+      description: 'Successfully completed internship at Nihub, recognized for enthusiasm, dedication, and valuable contributions.',
+      image: '/nihub-cert.png',
+    },
+    {
+      title: 'Online Training: START',
+      issuer: 'Online Training Program',
+      date: 'August 2024',
+      description: 'Successfully completed the START online training program.',
+      pdf: '/training-start.pdf',
+    },
+    {
+      title: 'Online Training: INSPIRE',
+      issuer: 'Online Training Program',
+      date: 'August 2024',
+      description: 'Successfully completed the INSPIRE online training program.',
+      pdf: '/training-inspire.pdf',
+    },
   ],
+
+ 
 
   // --- Materials Informatics Pipeline ---
   informaticsPipeline: [
