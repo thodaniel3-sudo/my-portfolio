@@ -672,7 +672,7 @@ export const profile = {
     },
   ],
 
-   // --- Certifications ---
+  // --- Certifications ---
   certifications: [
     {
       title: 'General Health, Safety and Environment Management (Levels 1 & 2)',
@@ -680,6 +680,20 @@ export const profile = {
       date: 'August 2022',
       description: 'Comprehensive training on industrial safety, hazard identification, fire safety, and workshop/site safety protocols.',
       image: '/hse-certificate.png',
+    },
+        {
+      title: 'IT Ethics: Professionalism and Ethics in Computing',
+      issuer: 'Charles Sturt University (via FutureLearn)',
+      date: 'August 2020',
+      description: 'Explored the history of ethics in IT, the impact of an ethical approach to computing, and the application of ethical theories to moral dilemmas involving computing professionals (e.g., Australian Computer Society Code of Professional Conduct).',
+      pdf: '/it-ethics-certificate.pdf', // <--- CHANGED FROM image TO pdf
+    },
+        {
+      title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
+      issuer: 'Oracle Corporation',
+      date: 'July 2025',
+      description: 'Globally recognized certification validating foundational knowledge of Oracle Cloud Infrastructure (OCI) core services, security, architecture, and cloud concepts. Valid until July 2027.',
+      pdf: '/oracle-cloud-certificate.pdf',
     }
   ],
 

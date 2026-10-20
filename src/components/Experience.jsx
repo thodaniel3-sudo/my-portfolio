@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FlaskConical, Briefcase, Image as ImageIcon, X, ShieldCheck } from 'lucide-react';
+import { FlaskConical, Briefcase, Image as ImageIcon, X, ShieldCheck, FileText } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 
@@ -39,11 +39,9 @@ export default function Experience() {
                   <p className="text-sm text-ink-400 leading-relaxed">{item.description}</p>
                 </div>
 
-                {/* TRAINING IMAGES BUTTONS */}
                 {item.images && item.images.length > 0 && (
                   <div className="mt-5 flex flex-wrap gap-2">
                     {item.images.map((img, idx) => {
-                      // Handle both old string format and new object format
                       const imgSrc = typeof img === 'string' ? img : img.src;
                       const imgLabel = typeof img === 'string' ? `View Image ${idx + 1}` : img.label;
                       
@@ -113,14 +111,24 @@ export default function Experience() {
                       )}
                     </div>
                     
-                    {cert.image && (
+                    {/* LOGIC: If it's a PDF, open in new tab. If it's an image, open the modal */}
+                    {cert.pdf ? (
+                      <a
+                        href={cert.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors w-fit bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
+                      >
+                        <FileText size={14} /> View Certificate (PDF)
+                      </a>
+                    ) : cert.image ? (
                       <button
                         onClick={() => setActiveImage(cert.image)}
                         className="inline-flex items-center gap-2 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors w-fit bg-white/5 px-3 py-1.5 rounded-md border border-white/10 hover:border-emerald-500/40"
                       >
                         <ShieldCheck size={14} /> View Certificate
                       </button>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>
@@ -129,7 +137,7 @@ export default function Experience() {
         )}
       </div>
 
-      {/* FULL SCREEN IMAGE MODAL */}
+      {/* FULL SCREEN IMAGE MODAL (For HSE Certificate and other Images) */}
       {activeImage && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-ink-950/90 backdrop-blur-md animate-fade-up"
