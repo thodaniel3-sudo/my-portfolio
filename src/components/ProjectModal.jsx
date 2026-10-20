@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { X, Github, ExternalLink, Layers, Wrench, Target, Award, Info } from 'lucide-react';
+import { X, Github, ExternalLink, Layers, Wrench, Target, Award, Info, Download } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -16,6 +16,9 @@ export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
   const { detail } = project;
   const requiresSetup = (project.githubUrl || detail?.githubBackendUrl) && !project.liveUrl;
+  
+  // Check if the live link is a Google Drive file (meaning it's an exe)
+  const isExeDownload = project.liveUrl && project.liveUrl.includes('drive.google.com');
 
   return (
     <div
@@ -102,7 +105,10 @@ export default function ProjectModal({ project, onClose }) {
               <Section title="Properties Studied" icon={<Target size={14} />}>
                 <div className="flex flex-wrap gap-2">
                   {detail.properties.map((p) => (
-                    <span key={p} className="text-xs px-3 py-1.5 rounded-md border border-white/10 text-ink-200">
+                    <span
+                      key={p}
+                      className="text-xs px-3 py-1.5 rounded-md border border-white/10 text-ink-200"
+                    >
                       {p}
                     </span>
                   ))}
@@ -133,20 +139,42 @@ export default function ProjectModal({ project, onClose }) {
 
           <div className="mt-10 flex flex-wrap gap-3">
             {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
                 <Github size={16} /> {detail.githubBackendUrl ? 'Frontend Repo' : 'View on GitHub'}
               </a>
             )}
+            
             {detail.githubBackendUrl && (
-              <a href={detail.githubBackendUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <a
+                href={detail.githubBackendUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
                 <Github size={16} /> Backend Repo
               </a>
             )}
+
             {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                <ExternalLink size={16} /> Live Demo
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {isExeDownload ? (
+                  <> <Download size={16} /> View .exe Software </>
+                ) : (
+                  <> <ExternalLink size={16} /> Live Demo </>
+                )}
               </a>
             )}
+
             {!project.githubUrl && !project.liveUrl && !project.images && (
               <div className="flex items-center gap-2 pt-2">
                 <span className="w-8 h-px bg-emerald-500/50" />

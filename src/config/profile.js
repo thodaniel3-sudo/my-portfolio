@@ -240,7 +240,7 @@ export const profile = {
       category: 'Materials Engineering & Software',
       tags: ['Python', 'Materials Engineering', 'Data Analysis', 'Mineral Processing'],
       githubUrl: 'https://github.com/thodaniel3-sudo/LEABAS',
-      liveUrl: '',
+      liveUrl: 'https://drive.google.com/file/d/1gxLVID9PRLAX5A2-nlZURNLY2jGRegxZ/view?usp=sharing',
       detail: {
         overview:
           'LEABAS (Limestone Extraction & Beneficiation Analysis System) is a custom Python application built to analyze real-world experimental data from limestone processing. It takes data from physical operations — such as jaw crushing, ball milling, and sieve analysis — and calculates key material parameters to evaluate the efficiency of the beneficiation process.',
@@ -278,7 +278,7 @@ export const profile = {
       category: 'Scientific Software / Materials Informatics',
       tags: ['Python', 'Materials Characterization', 'Data Analysis', 'Scientific Computing'],
       githubUrl: 'https://github.com/thodaniel3-sudo/characterization-software',
-      liveUrl: '',
+      liveUrl: 'https://drive.google.com/file/d/18tuI5drfeZfS9wZ-93ZxRxie0yfs6-fb/view?usp=sharing',
       detail: {
         overview:
           'Developed a Python-based scientific application for analyzing and visualizing experimental characterization data of multi-walled carbon nanotubes (MWCNTs). The application integrates multiple characterization techniques to support the evaluation of surface area, pore structure, elemental composition, crystallographic properties, and material morphology. It features automated data processing, graphical visualization, database storage, and PDF report generation, helping streamline materials characterization workflows and improve the organization and presentation of experimental results.',
@@ -320,7 +320,7 @@ export const profile = {
       category: 'Materials Informatics',
       tags: ['Python', 'Machine Learning', 'Materials Informatics', 'Data Science', 'Materials Engineering'],
       githubUrl: 'https://github.com/thodaniel3-sudo/HCPS',
-      liveUrl: '',
+      liveUrl: 'https://drive.google.com/file/d/19tWHZD6Pj0Nvl6p45OjpbycEb8AxoiGr/view?usp=sharing',
       detail: {
         overview:
           'A Python-based engineering application designed to explore prediction of hybrid composite properties using materials data and machine learning.',
