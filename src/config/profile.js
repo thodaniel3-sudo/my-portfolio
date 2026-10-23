@@ -357,7 +357,7 @@ export const profile = {
       category: 'Full-Stack Development',
       tags: ['Node.js', 'Express.js', 'JavaScript', 'Supabase', 'Web Development'],
       githubUrl: 'https://github.com/thodaniel3/attendance-frontend',
-      liveUrl: 'https://atendance-management.vercel.app', // <--- ADD THIS LINE
+      liveUrl: 'https://universal-qr-attendance.vercel.app/', // <--- ADD THIS LINE
       detail: {
         overview:
           'Designed and developed a web-based attendance management system with a separate frontend and backend to streamline student registration and attendance tracking. The system enables students to register and download their unique QR codes, which lecturers scan to identify students and record attendance electronically. The application integrates database management and backend verification to support organized attendance records, reduce manual processes, and improve the efficiency of classroom attendance management.',

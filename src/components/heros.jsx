@@ -29,17 +29,17 @@ export default function Hero() {
       <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-electric-500/5 blur-[120px]" />
 
       <div className="container-x relative z-10 w-full">
-        {/* Split grid layout */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Split grid layout - Images get 7 columns, Text gets 5 */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          {/* LEFT SIDE: TWO Profile Photos side-by-side */}
+          {/* LEFT SIDE: TWO Profile Photos (Now wider and taller) */}
           <div 
             className="lg:col-span-7 flex gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-up"
             style={{ animationDelay: '100ms' }}
           >
             
             {/* IMAGE 1 */}
-            <div className="relative group w-[49%]">
+            <div className="relative group w-[48%]">
               <div className="absolute -inset-1 bg-gradient-to-tr from-emerald-500/40 via-electric-500/20 to-transparent rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
               
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-ink-900 shadow-2xl">
@@ -54,10 +54,10 @@ export default function Hero() {
                 
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="backdrop-blur-md bg-ink-950/60 border border-white/10 rounded-lg p-3">
-                    <p className="text-emerald-400 text-[10px] font-medium tracking-wider uppercase mb-1">
+                    <p className="text-emerald-400 text-[11px] font-medium tracking-wider uppercase mb-1">
                       Engineer
                     </p>
-                    <p className="text-ink-50 font-display font-semibold text-sm md:text-base">
+                    <p className="text-ink-50 font-display font-semibold text-base md:text-lg">
                       Daniel Thomas
                     </p>
                   </div>
@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
 
             {/* IMAGE 2 */}
-            <div className="relative group w-[49%]">
+            <div className="relative group w-[48%]">
               <div className="absolute -inset-1 bg-gradient-to-tr from-electric-500/40 via-emerald-500/20 to-transparent rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
               
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-ink-900 shadow-2xl">
@@ -81,10 +81,10 @@ export default function Hero() {
                 
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="backdrop-blur-md bg-ink-950/60 border border-white/10 rounded-lg p-3">
-                    <p className="text-electric-400 text-[10px] font-medium tracking-wider uppercase mb-1">
+                    <p className="text-electric-400 text-[11px] font-medium tracking-wider uppercase mb-1">
                       Field Work
                     </p>
-                    <p className="text-ink-50 font-display font-semibold text-sm md:text-base">
+                    <p className="text-ink-50 font-display font-semibold text-base md:text-lg">
                       On Field
                     </p>
                   </div>
@@ -94,7 +94,7 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT SIDE: Text Content */}
+          {/* RIGHT SIDE: Text Content (Moved right to give images more room) */}
           <div className="lg:col-span-5 lg:pl-4 xl:pl-8">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mb-8 animate-fade-up">
               <Sparkles size={12} />
