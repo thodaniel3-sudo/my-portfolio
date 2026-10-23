@@ -712,6 +712,31 @@ export const profile = {
       description: 'Successfully completed modules in Computer Essentials, Online Essentials, Documents, and Spreadsheets.',
       pdf: '/icdl-certificate.pdf',
     },
+        // ... (Keep your existing Oracle, Udemy, HSE, etc. above this)
+    
+    // Additional Certifications
+    {
+      title: 'Herbalism For Everyone Diploma',
+      issuer: 'The Academy of Ancient Magik (Accredited by IAOT)',
+      date: 'May 2023',
+      description: 'Accredited diploma course covering the fundamentals of herbalism and natural plant-based practices.',
+      image: '/herbalism-diploma.jpeg',
+    },
+    {
+      title: 'Udemy: Professional Herbalism Course',
+      issuer: 'The Academy of Ancient Magik (via Udemy)',
+      date: 'June 2022',
+      description: 'Completed a 2-hour professional course exploring the principles and applications of herbalism.',
+      image: '/udemy-herbalism.jpeg',
+    },
+    {
+      title: 'Diageo Bar Academy: Guinness Essentials',
+      issuer: 'Diageo Bar Academy',
+      date: 'October 2022',
+      description: 'Covering the fundamentals of Heritage and Innovation, Guinness Variants and Key Serves, The 7 Cs of Quality Maintenance, and Guinness and Food.',
+      image: '/guinness-essentials.jpeg',
+    },
+  
     // Entrepreneurship & Innovation
     {
       title: 'Certificate in Making Organic/Natural Skincare Products',
