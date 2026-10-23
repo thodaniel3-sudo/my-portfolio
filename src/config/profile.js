@@ -720,14 +720,14 @@ export const profile = {
       issuer: 'The Academy of Ancient Magik (Accredited by IAOT)',
       date: 'May 2023',
       description: 'Accredited diploma course covering the fundamentals of herbalism and natural plant-based practices.',
-      image: '/herbalism-diploma.jpeg',
+      image: '/herbalism-diploma.jpg',
     },
     {
       title: 'Udemy: Professional Herbalism Course',
       issuer: 'The Academy of Ancient Magik (via Udemy)',
       date: 'June 2022',
       description: 'Completed a 2-hour professional course exploring the principles and applications of herbalism.',
-      image: '/udemy-herbalism.jpeg',
+      image: '/udemy-herbalism.jpg',
     },
     {
       title: 'Diageo Bar Academy: Guinness Essentials',
