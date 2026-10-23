@@ -690,6 +690,13 @@ export const profile = {
       description: 'Globally recognized certification validating foundational knowledge of Oracle Cloud Infrastructure (OCI) core services, security, architecture, and cloud concepts. Valid until July 2027.',
       pdf: '/oracle-cloud-certificate.pdf',
     },
+       {
+      title: 'MATLAB Onramp',
+      issuer: 'MathWorks Training Services',
+      date: 'June 2023',
+      description: 'Successfully completed 100% of the self-paced training course covering the fundamentals of MATLAB for numerical computation, data analysis, and programming.',
+      pdf: '/matlab-onramp.pdf',
+    },
     {
       title: 'General Health, Safety and Environment Management (Levels 1 & 2)',
       issuer: 'Movalue Consulting & IAPM Nigeria Network',
@@ -720,7 +727,8 @@ export const profile = {
       issuer: 'The Academy of Ancient Magik (Accredited by IAOT)',
       date: 'May 2023',
       description: 'Accredited diploma course covering the fundamentals of herbalism and natural plant-based practices.',
-      image: '/herbalism-diploma.jpg',
+      
+      pdf: '/herbalism-diploma.pdf'
     },
     {
       title: 'Udemy: Professional Herbalism Course',
