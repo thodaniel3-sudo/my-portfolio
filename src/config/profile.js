@@ -103,6 +103,9 @@ export const profile = {
         'Mineral Processing',
       ],
     },
+
+
+
     {
       category: 'Computational / Data',
       level: 'Working Knowledge & Research Interest',
@@ -117,6 +120,11 @@ export const profile = {
         'Cloud Computing (AWS, Azure, GCP)',
       ],
     },
+
+
+
+
+
     {
       category: 'Software / Web Development',
       level: 'Technical Skill',
@@ -139,6 +147,24 @@ export const profile = {
         'Netlify',
       ],
     },
+
+ // --- ADD THIS NEW BLOCK HERE ---
+    {
+      category: 'Design & Creative Tools',
+      level: 'Technical Skill',
+      items: [
+        'CorelDRAW',
+        'Adobe Photoshop',
+        'Flyer Design',
+        'Poster Design',
+        'Handbills & Stickers',
+        'Brand Identity',
+        'Print Media Design',
+      ],
+    },
+    // ---
+
+
     {
       category: 'Soft Skills & Languages',
       level: 'Professional',

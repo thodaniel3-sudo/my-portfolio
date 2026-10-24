@@ -11,8 +11,7 @@ export default function Skills() {
             A working toolkit spanning materials engineering, computation, and software.
           </h2>
         </SectionReveal>
-
-        <div className="mt-14 grid md:grid-cols-2 gap-4">
+<div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {profile.skills.map((group, i) => (
             <SectionReveal key={group.category} delay={i * 60}>
               <div className="card p-6 md:p-8 h-full">
