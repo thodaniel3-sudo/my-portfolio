@@ -14,6 +14,7 @@ export default function Experience() {
           <h2 className="heading max-w-3xl">Research, academic activity, and professional experience.</h2>
         </SectionReveal>
 
+        {/* FIXED GRID HERE */}
         <div className="mt-14 grid md:grid-cols-2 gap-4">
           {profile.researchExperience.map((item, i) => (
             <SectionReveal key={item.title} delay={i * 60}>
@@ -66,7 +67,7 @@ export default function Experience() {
         <SectionReveal delay={200}>
           <div className="mt-16">
             <h3 className="font-display text-2xl text-ink-50 mb-6">Leadership & Responsibilities</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               {profile.leadership.map((item) => (
                 <div key={item.role} className="card p-6 border-l-2 border-l-emerald-500 flex flex-col justify-between">
                   <div>
@@ -97,7 +98,7 @@ export default function Experience() {
           <SectionReveal delay={300}>
             <div className="mt-16">
               <h3 className="font-display text-2xl text-ink-50 mb-6">Certifications</h3>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 gap-4">
                 {profile.certifications.map((cert) => (
                   <div key={cert.title} className="card p-6 border-l-2 border-l-electric-400 flex flex-col justify-between">
                     <div>
@@ -111,7 +112,6 @@ export default function Experience() {
                       )}
                     </div>
                     
-                    {/* LOGIC: If it's a PDF, open in new tab. If it's an image, open the modal */}
                     {cert.pdf ? (
                       <a
                         href={cert.pdf}
@@ -137,7 +137,7 @@ export default function Experience() {
         )}
       </div>
 
-      {/* FULL SCREEN IMAGE MODAL (For HSE Certificate and other Images) */}
+      {/* FULL SCREEN IMAGE MODAL */}
       {activeImage && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-ink-950/90 backdrop-blur-md animate-fade-up"

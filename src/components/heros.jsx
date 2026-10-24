@@ -32,14 +32,14 @@ export default function Hero() {
         {/* Split grid layout - Images get 7 columns, Text gets 5 */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          {/* LEFT SIDE: TWO Profile Photos (Now wider and taller) */}
+               {/* LEFT SIDE: TWO Profile Photos */}
           <div 
-            className="lg:col-span-7 flex gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-up"
+            className="lg:col-span-7 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up"
             style={{ animationDelay: '100ms' }}
           >
             
             {/* IMAGE 1 */}
-            <div className="relative group w-[48%]">
+            <div className="relative group w-full sm:w-[48%] max-w-[280px] mx-auto sm:max-w-none">
               <div className="absolute -inset-1 bg-gradient-to-tr from-emerald-500/40 via-electric-500/20 to-transparent rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
               
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-ink-900 shadow-2xl">

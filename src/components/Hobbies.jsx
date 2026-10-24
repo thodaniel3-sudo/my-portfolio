@@ -1,4 +1,4 @@
-import { Heart, Activity, Music, PenTool, Brain, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import profile from '../config/profile.js';
 import SectionReveal from './SectionReveal.jsx';
 

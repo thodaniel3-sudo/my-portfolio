@@ -32,7 +32,7 @@ export default function Projects() {
                   </div>
 
                   <div className="md:col-span-7">
-                    <h3 className="font-display text-xl md:text-2xl text-ink-50 leading-tight group-hover:text-emerald-400 transition-colors">
+                   <h3 className="font-display text-xl md:text-2xl text-ink-50 leading-tight group-hover:text-emerald-400 transition-colors break-words">
                       {p.title}
                     </h3>
                     <p className="mt-3 text-sm text-ink-400 leading-relaxed max-w-2xl">

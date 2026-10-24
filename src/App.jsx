@@ -9,13 +9,15 @@ import Experience from './components/Experience.jsx';
 import Informatics from './components/Informatics.jsx';
 import Sustainability from './components/Sustainability.jsx';
 import FutureDirection from './components/FutureDirection.jsx';
+import Hobbies from './components/Hobbies.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import BackToTop from './components/BackToTop.jsx';
-import Hobbies from './components/Hobbies.jsx'; // <--- ADD THIS
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-ink-950 text-ink-100 relative">
+    // ADDED overflow-x-hidden HERE TO PREVENT SIDEWAYS SCROLLING
+    <div className="min-h-screen bg-ink-950 text-ink-100 relative overflow-x-hidden">
       <Navbar />
 
       <main>
@@ -29,7 +31,7 @@ export default function App() {
         <Informatics />
         <Sustainability />
         <FutureDirection />
-         <Hobbies /> {/* <--- ADD THIS LINE */}
+        <Hobbies />
         <Contact />
       </main>
 
