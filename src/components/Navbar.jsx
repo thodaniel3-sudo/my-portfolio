@@ -56,7 +56,8 @@ export default function Navbar() {
           <span className="text-ink-50 dark:text-ink-50">Daniel Thomas</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden lg:flex items-center gap-0.5 xl:gap-1">
+        {/* UPDATED NAV SPACING FOR RESPONSIVENESS */}
+        <nav aria-label="Primary" className="hidden lg:flex items-center gap-0 xl:gap-1">
           {profile.nav.map((item) => {
             const isActive = active === item.href.replace('#', '');
             return (
@@ -64,13 +65,13 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={go(item.href)}
-                className={`relative px-2 xl:px-3 py-2 text-[13px] xl:text-sm transition-colors ${
+                className={`relative px-1.5 xl:px-3 py-2 text-[12px] xl:text-sm transition-colors ${
                   isActive ? 'text-emerald-400' : 'text-ink-300 hover:text-ink-50'
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute left-2 right-2 -bottom-0.5 h-px bg-emerald-500/70" />
+                  <span className="absolute left-1.5 right-1.5 -bottom-0.5 h-px bg-emerald-500/70" />
                 )}
               </a>
             );
@@ -116,7 +117,7 @@ export default function Navbar() {
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="container-x py-8 flex flex-col gap-1 overflow-y-auto h-full pb-20">
+        <div className="container-x py-8 flex flex-col gap-1 overflow-y-auto max-h-[calc(100vh-64px)] pb-20">
           {profile.nav.map((item, i) => (
             <a
               key={item.label}
