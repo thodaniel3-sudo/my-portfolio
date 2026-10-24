@@ -11,6 +11,19 @@ export const profile = {
 
   location: 'Area 2/3, London Street, Bosso, Minna, Niger State, Nigeria',
 
+
+ // --- Hobbies & Interests ---
+  hobbies: [
+    { title: 'Playing the Keyboard', description: 'Musical expression and creativity.' },
+    { title: 'Solving Mathematics', description: 'Analytical problem solving and logic.' },
+    { title: 'Weightlifting', description: 'Strength training, discipline, and fitness.' },
+    { title: 'Artwork & Portraits', description: 'Drawing realistic human figures and sketching.' },
+    { title: 'Prayer & Spiritual Growth', description: 'Personal reflection and spiritual development.' },
+  ],
+
+
+
+
   // --- Contact ---
   email: 'thodaniel3@gmail.com',
   whatsapp: '+2348107247625',
@@ -899,6 +912,7 @@ export const profile = {
     { label: 'Experience', href: '#experience' },
     { label: 'Informatics', href: '#informatics' },
     { label: 'Sustainability', href: '#sustainability' },
+     { label: 'Hobbies', href: '#hobbies' }, // <--- ADD THIS
     { label: 'Contact', href: '#contact' },
   ],
 };

@@ -12,7 +12,7 @@ import FutureDirection from './components/FutureDirection.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import BackToTop from './components/BackToTop.jsx';
-
+import Hobbies from './components/Hobbies.jsx'; // <--- ADD THIS
 export default function App() {
   return (
     <div className="min-h-screen bg-ink-950 text-ink-100 relative">
@@ -29,6 +29,7 @@ export default function App() {
         <Informatics />
         <Sustainability />
         <FutureDirection />
+         <Hobbies /> {/* <--- ADD THIS LINE */}
         <Contact />
       </main>
 
