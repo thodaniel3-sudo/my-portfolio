@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
-import { Menu, X, Github, Linkedin, Sun, Moon, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Sun, Moon, Mail, FileText } from 'lucide-react';
 import profile from '../config/profile.js';
 import { useScrollSpy } from '../hooks/useScrollSpy.js';
 import { useTheme } from '../context/ThemeContext.jsx';
@@ -56,7 +56,6 @@ export default function Navbar() {
           <span className="text-ink-50 dark:text-ink-50">Daniel Thomas</span>
         </a>
 
-        {/* UPDATED NAV SPACING FOR RESPONSIVENESS */}
         <nav aria-label="Primary" className="hidden lg:flex items-center gap-0 xl:gap-1">
           {profile.nav.map((item) => {
             const isActive = active === item.href.replace('#', '');
@@ -92,12 +91,24 @@ export default function Navbar() {
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
+          
+          {/* CONTACT BUTTON */}
           <a
             href={profile.email !== 'YOUR_EMAIL_HERE' ? `mailto:${profile.email}` : '#contact'}
             onClick={profile.email === 'YOUR_EMAIL_HERE' ? go('#contact') : undefined}
             className="btn-primary !px-3 xl:!px-4 !py-2 text-xs"
           >
             <Mail size={14} /> Contact
+          </a>
+
+          {/* NEW CV BUTTON */}
+          <a
+            href="/Daniel_Thomas_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 xl:px-4 py-2 text-xs font-medium rounded-md border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 transition-colors"
+          >
+            <FileText size={14} /> CV
           </a>
         </div>
 
@@ -133,6 +144,17 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+
+          {/* MOBILE CV BUTTON */}
+          <a
+            href="/Daniel_Thomas_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center justify-center gap-2 py-3 border border-emerald-500/50 rounded-md text-emerald-400 font-medium hover:bg-emerald-500/10 transition-colors"
+          >
+            <FileText size={18} /> View CV
+          </a>
+
           <div className="flex items-center gap-4 mt-6">
             <IconLink href={profile.github} label="GitHub">
               <Github size={18} />
