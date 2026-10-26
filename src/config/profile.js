@@ -395,7 +395,11 @@ export const profile = {
         'A web-based attendance management system with separate frontend and backend, allowing students to register, download unique QR codes, and lecturers to scan and record attendance electronically.',
       category: 'Full-Stack Development',
       tags: ['Node.js', 'Express.js', 'JavaScript', 'Supabase', 'Web Development'],
-      githubUrl: 'https://github.com/thodaniel3/attendance-frontend',
+
+
+
+
+      githubUrl: 'https://github.com/thodaniel3-sudo/universal-qr-attendance',
       liveUrl: 'https://universal-qr-attendance.vercel.app/', // <--- ADD THIS LINE
       detail: {
         overview:
@@ -423,8 +427,16 @@ export const profile = {
         focus:
           'Building a reliable, automated attendance tracking solution using web technologies.',
         githubBackendUrl: 'https://github.com/thodaniel3/attendance-backend',
+        liveUrl: 'https://attendance-management-systemslive.vercel.app/', // <--- ADD THIS LINE
+        
       },
     },
+
+
+
+
+
+    
     {
       id: 'cgpa-calculator',
       number: '07',
