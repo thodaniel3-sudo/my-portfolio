@@ -802,21 +802,21 @@ export const profile = {
       issuer: 'Purebliss Skincare',
       date: 'April 2021',
       description: 'Completed comprehensive training in the formulation and production of organic skincare products.',
-      image: '/purebliss-cert.jpeg',
+      image: '/purebliss-cert.png',
     },
     {
       title: 'FUTEC Business Idea Competition (Season 5)',
       issuer: 'FUT Minna Entrepreneurship Centre',
       date: 'January 2023',
       description: 'Participated in the Business Idea Competition and was admitted into the FUTEC Incubation Hub.',
-      image: '/futec-idea-cert.jpeg',
+      image: '/futec-idea-cert.png',
     },
     {
       title: 'Corporate Ethics, Skills, & Job Awareness',
       issuer: 'Megarich Networks and Consultants Ltd',
       date: 'December 2022',
       description: 'Training in corporate ethics, networking, human relations, and job awareness.',
-      image: '/megarich-cert.jpeg',
+      image: '/megarich-cert.png',
     },
     {
       title: 'Inventors’ Week 2025',
@@ -846,7 +846,7 @@ export const profile = {
       issuer: 'Nihub & FUT Minna',
       date: 'November 2025',
       description: 'Successfully completed internship at Nihub, recognized for enthusiasm, dedication, and valuable contributions.',
-      image: '/nihub-cert.jpg',
+      image: '/nihub-cert.png',
     },
     {
       title: 'Online Training: START',
